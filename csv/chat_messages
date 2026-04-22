@@ -1,0 +1,502 @@
+id,chat_room_id,message,like_status,created_at,created_by
+24a644ef-9d16-4246-9698-5d3ee08e8856,thread_uDSDaoDg65n3LsYjwx7C113c,What is the waste in France?,,2025-01-23 06:40:57.776137+00,7883d102-f642-450d-bbb0-99b4f0e834b7
+5019620c-4e41-49ae-be3d-a162dfe8e2f6,thread_uDSDaoDg65n3LsYjwx7C113c,What is the plastic waste in France?,,2025-01-23 06:41:37.696651+00,7883d102-f642-450d-bbb0-99b4f0e834b7
+fc95a071-1b18-4ec2-ac3e-de255e6932ab,thread_PSOfulSpAYLH0G66hIRAwjZF,Show me statistics for France on MSW Generated,,2025-01-23 06:45:48.256707+00,7883d102-f642-450d-bbb0-99b4f0e834b7
+6d63837a-b8fd-4454-9f6a-6deb67e133f2,thread_U0AAq2GroyF1JFsLxl3565fO,Show me statistics on MSW Generated,,2025-01-23 06:48:32.72129+00,7883d102-f642-450d-bbb0-99b4f0e834b7
+326600a1-c99e-4435-a41c-f46fbd134966,thread_byhbQqAfZlXSC5qENmpyRCbP,Show me statistics on Plastic Waste Generated,,2025-01-23 07:01:38.575987+00,7883d102-f642-450d-bbb0-99b4f0e834b7
+6cf932ab-8615-4a65-bb31-4af3f4c8c1cc,thread_nYmyUPV8XzqQPQIx6uCjbtVc,Show me statistics on Plastic Waste Generated,,2025-01-23 07:10:36.863096+00,7883d102-f642-450d-bbb0-99b4f0e834b7
+msg_XMPvOLFEK4YOGwHtu1vwguBB,thread_nYmyUPV8XzqQPQIx6uCjbtVc,"Please provide a country for the statistics on Plastic Waste Generated. Meanwhile, you can view the heatmap of Plastic Waste Generated.",,2025-01-23 07:10:41.195459+00,AI
+e0ae4617-b78a-43b0-ac08-e910f0404eac,thread_nYmyUPV8XzqQPQIx6uCjbtVc,France,,2025-01-23 07:10:48.47298+00,7883d102-f642-450d-bbb0-99b4f0e834b7
+msg_alGe8Lgr95gjLipo1HnlCwkr,thread_nYmyUPV8XzqQPQIx6uCjbtVc,"I am sorry, it appears there was an issue retrieving that information. Please try again later.",,2025-01-23 07:10:54.192591+00,AI
+616c3bba-5d07-46ce-877f-c2224f5d21ff,thread_nYmyUPV8XzqQPQIx6uCjbtVc,Indonesia,,2025-01-23 07:11:03.01832+00,7883d102-f642-450d-bbb0-99b4f0e834b7
+msg_oJSKtZBzU6O3XnR5mMGQlO2Z,thread_nYmyUPV8XzqQPQIx6uCjbtVc,"I apologize for the inconvenience, but it seems I am currently unable to retrieve the data for Plastic Waste Generated in Indonesia. Please try again later.",,2025-01-23 07:11:08.380955+00,AI
+f1d1a14f-c9ac-4ed9-a508-0e97305abbc2,thread_nYmyUPV8XzqQPQIx6uCjbtVc,Show me statistics on Plastic Waste Generated in Indonesia,,2025-01-23 07:11:19.712028+00,7883d102-f642-450d-bbb0-99b4f0e834b7
+msg_SpNUlSg7SP3qY2zZE6bQnzLq,thread_nYmyUPV8XzqQPQIx6uCjbtVc,"I am sorry, it appears there was an issue retrieving that information for Plastic Waste Generated in Indonesia. Please try again later.",,2025-01-23 07:11:25.899001+00,AI
+68bb74de-5f9c-49bf-a772-31ceba8feda9,thread_HwiF5VMqbUP4e2PTC396f3sl,Show me statistics on Plastic Waste Generated,,2025-01-26 06:19:40.111598+00,7883d102-f642-450d-bbb0-99b4f0e834b7
+msg_8vM5cDYd8Tqw1VTqjnaptXY1,thread_HwiF5VMqbUP4e2PTC396f3sl,"Please provide a country for which you would like the statistics on Plastic Waste Generated. Meanwhile, here is the heatmap of Plastic Waste Generated.",,2025-01-26 06:19:43.8889+00,AI
+dcd278e7-eb41-49e4-b146-6a1ee1de5ce7,thread_1f8jXmboA8E2HS2cE8pzt8Th,What data do you have on the USA?,,2025-03-04 05:12:06.701411+00,2b5d4f41-5ba9-4c40-bcca-f6fdde21f8fb
+msg_XaVnuyqLaCf7S4RwZorVFmHt,thread_1f8jXmboA8E2HS2cE8pzt8Th,"I have the following categories of data related to the USA:
+
+1. Plastic Waste: Including data on generation, collection, leakage, and mismanagement of plastic waste.
+2. Municipal Solid Waste: Information on waste generation and collection.
+3. Total Plastic Consumption: Details around consumption of plastics and related polymers and resins.
+4. Waste Management: Insights into methods such as open dumping, incineration, and landfills.
+5. Waste Composition: Composition details of waste, including plastic, glass, metals, and more.
+6. Infrastructure: Information on sorting facilities, recycling facilities, informal waste treatment, landfills, and thermal treatment facilities.
+
+If you need specific data or statistics under these categories for the USA, please let me know!",,2025-03-04 05:12:10.371696+00,AI
+89c76f33-727a-44b7-88c9-b1e140e5c2a6,thread_1f8jXmboA8E2HS2cE8pzt8Th,Can you share figures on plastic waste generated,,2025-03-04 05:12:27.930612+00,2b5d4f41-5ba9-4c40-bcca-f6fdde21f8fb
+msg_iFuacw7KcamWVYnRWtkA1hQK,thread_1f8jXmboA8E2HS2cE8pzt8Th,"I am sorry, I do not have that information.",,2025-03-04 05:12:37.356408+00,AI
+00c0e590-5bfa-4bef-badc-c2b370aa1441,thread_1f8jXmboA8E2HS2cE8pzt8Th,what countries do you have plastic waste data for? ,,2025-03-04 05:12:46.31825+00,2b5d4f41-5ba9-4c40-bcca-f6fdde21f8fb
+msg_yqMlIsBTROT3qkkgS4G3NqDk,thread_1f8jXmboA8E2HS2cE8pzt8Th,"I apologize, but I do not have a list of specific countries for which I have plastic waste data. If there's a particular country you are interested in, please let me know, and I will check if the data is available.",,2025-03-04 05:12:50.284831+00,AI
+013dd09b-cc7f-412b-a832-aae589f7faf8,thread_1f8jXmboA8E2HS2cE8pzt8Th,plastic waste consumption for the US?,,2025-03-04 05:13:13.28089+00,2b5d4f41-5ba9-4c40-bcca-f6fdde21f8fb
+msg_YiIQ0IIz8WyAWjQNci6edF3T,thread_1f8jXmboA8E2HS2cE8pzt8Th,"I am sorry, I do not have that information.",,2025-03-04 05:13:15.700629+00,AI
+9887d856-c909-47ea-bb12-c68e375b3a87,thread_1f8jXmboA8E2HS2cE8pzt8Th,what about MSW?,,2025-03-04 05:13:31.884607+00,2b5d4f41-5ba9-4c40-bcca-f6fdde21f8fb
+msg_kSLhW0SwoBIfbu1wVctlHlw1,thread_1f8jXmboA8E2HS2cE8pzt8Th,"I am sorry, I do not have that information.",,2025-03-04 05:13:37.65781+00,AI
+msg_YeNxVjSCWdV2yIH0hxdRSeaL,thread_ghM7M4pyq5OcPDKcpvFAmnbl,Please provide a country for which you want statistics on Plastic Waste Generated. Here is the heatmap of Plastic Waste Generated.,,2025-03-04 05:14:33.62747+00,AI
+e64704d0-ff92-46a9-8924-4ffa5ffb44c0,thread_ghM7M4pyq5OcPDKcpvFAmnbl,USA,,2025-03-04 05:15:10.237129+00,2b5d4f41-5ba9-4c40-bcca-f6fdde21f8fb
+msg_hxremnFMuaZjPa0mss4tabZm,thread_ghM7M4pyq5OcPDKcpvFAmnbl,"I am sorry, but I couldn't find specific statistics on ""Plastic Waste Generated"" for the USA. Please let me know if there is anything else I can assist you with.",,2025-03-04 05:15:15.331085+00,AI
+a2e6c345-a6d1-4ba0-9cf5-14e4f824fda8,thread_1f8jXmboA8E2HS2cE8pzt8Th,What data do you have on the UK?,,2025-03-04 05:16:13.656276+00,2b5d4f41-5ba9-4c40-bcca-f6fdde21f8fb
+msg_UpaL5jNeMY3Vg13lFE65VBX8,thread_1f8jXmboA8E2HS2cE8pzt8Th,"I have the following categories of data related to the UK:
+
+1. Plastic Waste: Including data on generation, collection, leakage, and mismanagement of plastic waste.
+2. Municipal Solid Waste: Information on waste generation and collection.
+3. Total Plastic Consumption: Details around consumption of plastics and related polymers and resins.
+4. Waste Management: Insights into methods such as open dumping, incineration, and landfills.
+5. Waste Composition: Composition details of waste, including plastic, glass, metals, and more.
+6. Infrastructure: Information on sorting facilities, recycling facilities, informal waste treatment, landfills, and thermal treatment facilities.
+
+If you need specific data or statistics under these categories for the UK, please let me know!",,2025-03-04 05:16:17.105458+00,AI
+fdb1c8ab-33be-40d3-8b5b-324ff74a9e24,thread_1f8jXmboA8E2HS2cE8pzt8Th,Can you share the points for UK?,,2025-03-04 05:16:26.868364+00,2b5d4f41-5ba9-4c40-bcca-f6fdde21f8fb
+ddeeeb4e-e3b3-43a4-89ce-9b7234b72da6,thread_ghM7M4pyq5OcPDKcpvFAmnbl,how about plastic waste generated for indonesia,,2025-03-04 05:16:37.787435+00,2b5d4f41-5ba9-4c40-bcca-f6fdde21f8fb
+msg_o1LUfu5uAcrWrTwnsWEHwrzW,thread_1f8jXmboA8E2HS2cE8pzt8Th,"Here are the specific data points available for the UK:
+
+1. **Plastic Waste**:
+   - Plastic Waste Generated
+   - Plastic Waste Collected
+   - Plastic Waste Formally Collected
+   - Plastic Waste Informally Collected
+   - Plastic Waste Uncollected
+   - Exported Plastic Waste
+   - Imported Plastic Waste
+   - Plastic Leakage
+   - Plastic Leakage %
+   - Plastic Mismanaged
+   - Plastic Mismanaged %
+   
+2. **Municipal Solid Waste**:
+   - Municipal Solid Waste Generated
+   - Municipal Solid Waste Generated Per Capita
+   - Municipal Solid Waste Collected
+   - Municipal Solid Waste Collected Per Capita
+
+3. **Total Plastic Consumption**:
+   - SUP Consumed
+   - Rigid Plastic Consumed
+   - Flexible Plastic Consumed
+   - MLP Consumed
+   - Other Plastic Consumed
+   - Total Plastic Consumption
+   - Polymer PET Consumed
+   - Polymer HDPE Consumed
+   - Polymer PVC Consumed
+   - Polymer LDPE Consumed
+   - Polymer PP Consumed
+   - Polymer PS Consumed
+   - Other Polymer Consumed
+   - Total Polymer Consumption
+   - Resin PET Consumed
+   - Resin HDPE Consumed
+   - Resin PVC Consumed
+   - Resin LDPE Consumed
+   - Resin PP Consumed
+   - Resin PS Consumed
+   - Other Resin Consumed
+   - Total Resin Consumption
+
+4. **Waste Management**:
+   - Open Dump
+   - Incineration
+   - Digestion
+   - Composting
+   - Landfill
+   - Uncontrolled Landfill
+   - Unspecified Landfill
+   - Controlled Landfill
+   - Waterways
+   - Other
+
+5. **Waste Composition**:
+   - Plastic %
+   - Organic %
+   - Glass %
+   - Paper %
+   - Metal %
+   - Other %
+
+If you need further details on any of these data points for the UK, please let me know!",,2025-03-04 05:16:41.311561+00,AI
+4c3fcab6-60e8-400b-9a84-69f9a57bf184,thread_1f8jXmboA8E2HS2cE8pzt8Th,Please share plastic waste consumption figures for UK,,2025-03-04 05:16:45.729402+00,2b5d4f41-5ba9-4c40-bcca-f6fdde21f8fb
+msg_F2S8BL7YiHIbx9VNhCLGSkRN,thread_ghM7M4pyq5OcPDKcpvFAmnbl,"Here are the statistics on Plastic Waste Generated for Indonesia:
+
+| Year | Plastic Waste Generated (metric ton) | Quality Score (%) | Source |
+|------|--------------------------------------|--------------------|--------|
+| 2024 | 9,884,000                            | 96                 | [AEPW Database](https://saprismprodsea01.blob.core.windows.net/uploaded-files/AEPW_plastic_waste_generated.xlsx) |
+
+If you need more information, feel free to ask!",,2025-03-04 05:16:46.31946+00,AI
+msg_tvOA2BSNSqoRl5zJ1XV9T2LE,thread_1f8jXmboA8E2HS2cE8pzt8Th,"It seems there was an issue with retrieving the plastic waste consumption figures for the ""UK."" Could you please confirm if you meant ""United Kingdom""? If so, I will attempt to retrieve the information again.",,2025-03-04 05:16:53.458538+00,AI
+2bab119a-f862-4f5d-a219-bac84b916192,thread_ghM7M4pyq5OcPDKcpvFAmnbl,what information is available for USA,,2025-03-04 05:17:02.0613+00,2b5d4f41-5ba9-4c40-bcca-f6fdde21f8fb
+874101cd-2af2-40af-b2a7-13ad01fbe700,thread_1f8jXmboA8E2HS2cE8pzt8Th,"Yes, United Kingdom",,2025-03-04 05:17:03.329461+00,2b5d4f41-5ba9-4c40-bcca-f6fdde21f8fb
+msg_sBrmdc4IlD3xEh5g5A21kvSN,thread_ghM7M4pyq5OcPDKcpvFAmnbl,"I am sorry, but I couldn't retrieve general information for the USA. Please verify the country name or let me know if you want specific statistics or data points related to Plastic Waste or any other category, and I'll be glad to assist!",,2025-03-04 05:17:11.03129+00,AI
+msg_SY52aYgrJiZGRYBLlaGiX75l,thread_1f8jXmboA8E2HS2cE8pzt8Th,"Here are the figures on plastic waste consumption for the United Kingdom:
+
+- **Plastic Waste Generated**: 2,480,000 metric tons (2020)
+
+**Source**: [AEPW Database](https://saprismprodsea01.blob.core.windows.net/uploaded-files/AEPW_plastic_waste_generated.xlsx) 
+
+Quality Score: 99% 
+
+If you require more details, feel free to ask!",,2025-03-04 05:17:11.694018+00,AI
+0232e192-6a96-4e3d-b203-10a390a359f1,thread_1f8jXmboA8E2HS2cE8pzt8Th,do you have data on any other years?,,2025-03-04 05:17:22.162651+00,2b5d4f41-5ba9-4c40-bcca-f6fdde21f8fb
+msg_8D2cfSQ9jXzBaQwpSi4APKSE,thread_1f8jXmboA8E2HS2cE8pzt8Th,"I am sorry, I do not have that information.",,2025-03-04 05:17:24.771606+00,AI
+6db79426-c892-464f-8b5c-bcfc5d476c40,thread_1f8jXmboA8E2HS2cE8pzt8Th,what about indonesia? ,,2025-03-04 05:18:29.036231+00,2b5d4f41-5ba9-4c40-bcca-f6fdde21f8fb
+msg_LC4N4K42GkWpTxulDHjmsA33,thread_1f8jXmboA8E2HS2cE8pzt8Th,"Here are the figures on plastic waste consumption for Indonesia:
+
+- **Plastic Waste Generated**: 9,884,000 metric tons (2024)
+
+**Source**: [AEPW Database](https://saprismprodsea01.blob.core.windows.net/uploaded-files/AEPW_plastic_waste_generated.xlsx)
+
+Quality Score: 96%
+
+If you need additional information or data from other years, please let me know!",,2025-03-04 05:18:36.294325+00,AI
+0a2ed241-c905-441b-be1a-2929060b58b8,thread_1f8jXmboA8E2HS2cE8pzt8Th,Do you have any other data? ,,2025-03-04 05:18:55.749029+00,2b5d4f41-5ba9-4c40-bcca-f6fdde21f8fb
+msg_LKdkQMCSp6MLxQMY9lxrf8Zj,thread_1f8jXmboA8E2HS2cE8pzt8Th,"I am sorry, I do not have that information.",,2025-03-04 05:18:58.374451+00,AI
+419cbbd7-d89d-4faa-b52c-245958a2ba09,thread_qoEkZImLbts97gNgsX7IEXT6,What is the plastic waste leakage for indonesia?,,2025-03-04 05:22:30.960424+00,2b5d4f41-5ba9-4c40-bcca-f6fdde21f8fb
+msg_YgDCmOm7hxlRYGY2UeFthTXZ,thread_qoEkZImLbts97gNgsX7IEXT6,"I am sorry, I do not have that information.",,2025-03-04 05:22:34.840891+00,AI
+ad023f76-2dac-4b5c-8146-ccb96c54e295,thread_ghM7M4pyq5OcPDKcpvFAmnbl,Show me statistics for Indonesia on MSW Generated,,2025-03-04 05:25:02.301207+00,2b5d4f41-5ba9-4c40-bcca-f6fdde21f8fb
+msg_TbIlRXPufSbBQVZQExhQ4qaZ,thread_ghM7M4pyq5OcPDKcpvFAmnbl,"Here are the statistics on Municipal Solid Waste (MSW) Generated for Indonesia:
+
+| Year | Municipal Solid Waste Generated (metric ton) | Quality Score (%) | Source |
+|------|----------------------------------------------|--------------------|--------|
+| 2024 | 70,600,000                                   | 96                 | [AEPW Database](https://saprismprodsea01.blob.core.windows.net/uploaded-files/AEPW_plastic_waste_generated.xlsx) |
+
+If you have any other questions or need further information, please let me know!",,2025-03-04 05:25:08.886416+00,AI
+2a7eb731-14c4-4553-887c-42a6b2f6fef5,thread_ghM7M4pyq5OcPDKcpvFAmnbl,any other data sources?,,2025-03-04 05:25:29.90114+00,2b5d4f41-5ba9-4c40-bcca-f6fdde21f8fb
+msg_ifz9rDELzqzR2g1sPNz6rX13,thread_ghM7M4pyq5OcPDKcpvFAmnbl,"I am sorry, but the available statistics for Municipal Solid Waste (MSW) Generated for Indonesia currently come from the AEPW Database. If you are looking for additional data sources, you may need to consult other environmental or waste management databases or governmental reports for further information. If you have any other questions or need more assistance, feel free to ask!",,2025-03-04 05:25:33.171388+00,AI
+dfa41dcc-0304-41ac-a4b3-802d01c0e79d,thread_JtwF8nADxQeo2105aSy1wpDV,Show me statistics on MSW Generated,,2025-03-04 05:26:02.47468+00,2b5d4f41-5ba9-4c40-bcca-f6fdde21f8fb
+msg_C0yAMoQQAu9E7KKwfwndqTLc,thread_JtwF8nADxQeo2105aSy1wpDV,Here is the heatmap of Municipal Solid Waste Generated. Could you please provide a specific country for more detailed statistics?,,2025-03-04 05:26:05.958211+00,AI
+ace4ad5c-f8d9-41a7-8589-79e303cdb082,thread_jWA2sgcYpOYRvbNJlrGRjL2L,what about indonesia plastic waste leakage?,,2025-03-04 05:26:22.228982+00,2b5d4f41-5ba9-4c40-bcca-f6fdde21f8fb
+msg_MW9D0jTc2NjlIlHkNf2iam50,thread_jWA2sgcYpOYRvbNJlrGRjL2L,"I am sorry, I do not have that information.",,2025-03-04 05:26:26.666073+00,AI
+80982086-711e-47cd-94f6-d20bd88a0675,thread_JtwF8nADxQeo2105aSy1wpDV,an you show me the latest statistics for indonesia,,2025-03-04 05:26:31.870587+00,2b5d4f41-5ba9-4c40-bcca-f6fdde21f8fb
+msg_G7P4OTktuMtV75p94Zl2tsGf,thread_JtwF8nADxQeo2105aSy1wpDV,"Here are the latest statistics for Municipal Solid Waste Generated in Indonesia:
+
+| Year | Municipal Solid Waste Generated | Unit       | Quality Score (%) | Source                                                                 |
+|------|---------------------------------|------------|-------------------|-----------------------------------------------------------------------|
+| 2024 | 70,600,000                      | Metric Ton | 96                | [AEPW Database](https://saprismprodsea01.blob.core.windows.net/uploaded-files/AEPW_plastic_waste_generated.xlsx) |
+
+If you need further insights or additional data, feel free to ask!",,2025-03-04 05:26:39.742956+00,AI
+920e137e-d20e-4096-95df-b2e7fed2bb3a,thread_JtwF8nADxQeo2105aSy1wpDV,any other data source,,2025-03-04 05:26:46.846926+00,2b5d4f41-5ba9-4c40-bcca-f6fdde21f8fb
+msg_2fMgQ6CiSOFEkbj3ya5SFwrQ,thread_JtwF8nADxQeo2105aSy1wpDV,"I am sorry, I do not have that information.",,2025-03-04 05:26:50.142973+00,AI
+cdd534d9-6bca-4831-943c-34e983329894,thread_JtwF8nADxQeo2105aSy1wpDV,plastic waste collected in indonesia for 2019,,2025-03-04 05:33:23.609023+00,2b5d4f41-5ba9-4c40-bcca-f6fdde21f8fb
+msg_lviuelrFBluQw0ofvDSEZQNN,thread_JtwF8nADxQeo2105aSy1wpDV,"Here are the statistics for Plastic Waste Collected in Indonesia for the year 2019:
+
+| Year | Plastic Waste Collected | Unit       | Quality Score (%) | Source                                                                                       |
+|------|--------------------------|------------|-------------------|---------------------------------------------------------------------------------------------|
+| 2019 | 8,000                    | Metric Ton | 43                | [Pricing Transparency in the Recycled Plastics Supply Chain in India, Indonesia, Thailand, and Viet Nam.pdf](https://saprismprodsea01.blob.core.windows.net/uploaded-files/Pricing%20Transparency%20in%20the%20Recycled%20Plastics%20Supply%20Chain%20in%20India%2C%20Indonesia%2C%20Thailand%2C%20and%20Viet%20Nam.pdf) |
+
+If you have any more questions, feel free to ask!",,2025-03-04 05:33:33.674468+00,AI
+33ff8a6f-88b2-4490-98b0-9a3dcda4dd50,thread_1vkQWhG8L4YF0HbqdELhogr4,How about the plastic waste in indonesia in 2019,,2025-03-04 05:34:23.790926+00,2b5d4f41-5ba9-4c40-bcca-f6fdde21f8fb
+msg_5hCukHDAOj0ycR51VZYPr160,thread_1vkQWhG8L4YF0HbqdELhogr4,"In 2019, Indonesia generated approximately 9,394,000 metric tons of plastic waste. The data is sourced from the [AEPW Database](https://saprismprodsea01.blob.core.windows.net/uploaded-files/AEPW_plastic_waste_generated.xlsx) and has a quality score of 96%.",,2025-03-04 05:34:31.160527+00,AI
+72b216b8-b3f0-4e69-bad3-13500e82405c,thread_1vkQWhG8L4YF0HbqdELhogr4,how about plastic waste generated,,2025-03-04 05:35:03.908975+00,2b5d4f41-5ba9-4c40-bcca-f6fdde21f8fb
+msg_HrTPvwVZICDm1VuoJhTP0NLy,thread_1vkQWhG8L4YF0HbqdELhogr4,Could you please specify a location or year for the plastic waste generated data you are interested in?,,2025-03-04 05:35:06.313917+00,AI
+33ac619f-9470-4a06-be84-597a87db7633,thread_1vkQWhG8L4YF0HbqdELhogr4,indonesia 2019,,2025-03-04 05:36:51.879497+00,2b5d4f41-5ba9-4c40-bcca-f6fdde21f8fb
+msg_Kx6HXO1yMYDv8f3sL2WULwjz,thread_1vkQWhG8L4YF0HbqdELhogr4,"In 2019, Indonesia generated approximately 9,394,000 metric tons of plastic waste. The data is sourced from the [AEPW Database](https://saprismprodsea01.blob.core.windows.net/uploaded-files/AEPW_plastic_waste_generated.xlsx) and has a quality score of 96%.",,2025-03-04 05:36:55.117483+00,AI
+c38e8de9-fa36-4986-bf86-b20eabca0f7b,thread_1vkQWhG8L4YF0HbqdELhogr4,What is the plastic waste collected in indonesia in the last 5 years,,2025-03-04 05:38:14.909294+00,2b5d4f41-5ba9-4c40-bcca-f6fdde21f8fb
+msg_NUZKo65zhdycQhuzxy7y90VK,thread_1vkQWhG8L4YF0HbqdELhogr4,"I am sorry, I do not have that information for Indonesia in the last 5 years regarding plastic waste collected.",,2025-03-04 05:38:23.072432+00,AI
+6e677124-dcaf-45c6-9b80-9e5648e2f34d,thread_1vkQWhG8L4YF0HbqdELhogr4,Last 20 years,,2025-03-04 05:38:34.910579+00,2b5d4f41-5ba9-4c40-bcca-f6fdde21f8fb
+msg_A8594PS55E8zwA9Hg3Ak5Bwi,thread_1vkQWhG8L4YF0HbqdELhogr4,"Here is the data on plastic waste collected in Indonesia over the last 20 years:
+
+| Year | Plastic Waste Collected (Metric Tons) | Source | Quality Score (%) |
+|------|-------------------------------------------|--------|-------------------|
+| 2008 | 22,500,060                                | [World Waste Status Project, September 2020](https://saprismprodsea01.blob.core.windows.net/uploaded-files/World%20Waste%20Status%20Project%2C%20September%202020.xls) | 39 |
+| 2012 | 1,800,005                                 | [AEPW Database](https://saprismprodsea01.blob.core.windows.net/uploaded-files/AEPW_plastic_waste_generated.xlsx)  | 98 |
+| 2016 | 4,107,600                                 | [AEPW Database](https://saprismprodsea01.blob.core.windows.net/uploaded-files/AEPW_plastic_waste_generated.xlsx)  | 98 |
+| 2017 | 2,652,000                                 | [AEPW Database](https://saprismprodsea01.blob.core.windows.net/uploaded-files/AEPW_plastic_waste_generated.xlsx)  | 99 |
+| 2018 | 500,000                                   | [Plastic Waste Management and Burden in Indonesia](https://saprismprodsea01.blob.core.windows.net/uploaded-files/Plastic%20Waste%20Management%20and%20Burden%20in%20Indonesia.pdf) | 43 |
+| 2019 | 8,000                                     | [Pricing Transparency in the Recycled Plastics Supply Chain in India, Indonesia, Thailand, and Viet Nam](https://saprismprodsea01.blob.core.windows.net/uploaded-files/Pricing%20Transparency%20in%20the%20Recycled%20Plastics%20Supply%20Chain%20in%20India%2C%20Indonesia%2C%20Thailand%2C%20and%20Viet%20Nam.pdf) | 43 |
+| 2020 | 1,175,711.76                              | [P1790130109cb10a909d3209cc37ea6f789](https://saprismprodsea01.blob.core.windows.net/uploaded-files/P1790130109cb10a909d3209cc37ea6f789.pdf) | 78 |
+
+This data highlights the trends in plastic waste collection within the specified period.",,2025-03-04 05:38:46.059064+00,AI
+1f4b9afb-dfde-4448-9562-c355cae2bfff,thread_1vkQWhG8L4YF0HbqdELhogr4,graph?,,2025-03-04 05:40:44.724614+00,2b5d4f41-5ba9-4c40-bcca-f6fdde21f8fb
+msg_2YysbzVlai89g0BWFN6BxIcD,thread_1vkQWhG8L4YF0HbqdELhogr4,The chart for Plastic Waste Collected in Indonesia between 2006 and 2025 has been generated successfully. Please click the button below to view the chart.,,2025-03-04 05:40:52.532675+00,AI
+62f5c6cc-c4af-421d-b1df-3ed90bea0be4,thread_jWA2sgcYpOYRvbNJlrGRjL2L,What is the plastic waste collected in indonesia in the last 20 years,,2025-03-04 05:43:59.511341+00,2b5d4f41-5ba9-4c40-bcca-f6fdde21f8fb
+msg_mCQnnWpUrYUMddl7yI8fpNbb,thread_jWA2sgcYpOYRvbNJlrGRjL2L,"Here is the data on plastic waste collected in Indonesia over the last 20 years:
+
+| Year | Plastic Waste Collected (metric ton) | Quality Score (%) | Source |
+|------|-------------------------------------|-------------------|--------|
+| 2008 | 22,500,060                          | 39                | [World Waste Status Project, September 2020.xls](https://saprismprodsea01.blob.core.windows.net/uploaded-files/World%20Waste%20Status%20Project%2C%20September%202020.xls) |
+| 2012 | 1,800,005                           | 98                | [AEPW Database](https://saprismprodsea01.blob.core.windows.net/uploaded-files/AEPW_plastic_waste_generated.xlsx) |
+| 2016 | 4,107,600                           | 98                | [AEPW Database](https://saprismprodsea01.blob.core.windows.net/uploaded-files/AEPW_plastic_waste_generated.xlsx) |
+| 2017 | 2,652,000                           | 99                | [AEPW Database](https://saprismprodsea01.blob.core.windows.net/uploaded-files/AEPW_plastic_waste_generated.xlsx) |
+| 2018 | 500,000.0                           | 43                | [Plastic Waste Management and Burden in Indonesia.pdf](https://saprismprodsea01.blob.core.windows.net/uploaded-files/Plastic%20Waste%20Management%20and%20Burden%20in%20Indonesia.pdf) |
+| 2019 | 8,000.0                             | 43                | [Pricing Transparency in the Recycled Plastics Supply Chain in India, Indonesia, Thailand, and Viet Nam.pdf](https://saprismprodsea01.blob.core.windows.net/uploaded-files/Pricing%20Transparency%20in%20the%20Recycled%20Plastics%20Supply%20Chain%20in%20India%2C%20Indonesia%2C%20Thailand%2C%20and%20Viet%20Nam.pdf) |
+| 2020 | 1,175,711.76                        | 78                | [P1790130109cb10a909d3209cc37ea6f789.pdf](https://saprismprodsea01.blob.core.windows.net/uploaded-files/P1790130109cb10a909d3209cc37ea6f789.pdf) |
+
+The quality scores reflect the reliability of the data sources.",,2025-03-04 05:44:13.577055+00,AI
+9fea3b86-0238-4c2b-9296-cf15e564cade,thread_XokBGAz2FEREpSWH6xSqz26C,what about the total plastic consumption for USA,,2025-03-04 05:44:34.429874+00,2b5d4f41-5ba9-4c40-bcca-f6fdde21f8fb
+msg_PGf0UNn4l0g7ULO6JSlDivWZ,thread_XokBGAz2FEREpSWH6xSqz26C,"I am sorry, I do not have that information.",,2025-03-04 05:44:47.389684+00,AI
+46dfe00d-e709-4cc0-8fb7-2a245fcf42a6,thread_XokBGAz2FEREpSWH6xSqz26C,What data can yuo tell me about USA,,2025-03-04 05:45:00.126857+00,2b5d4f41-5ba9-4c40-bcca-f6fdde21f8fb
+msg_g0cuXdmni58xXQ5x7rOuZj2F,thread_XokBGAz2FEREpSWH6xSqz26C,"I am sorry, I do not have that information. Please ensure you provide a valid country name.",,2025-03-04 05:45:08.230996+00,AI
+eb6b4df5-600d-4942-8747-f33bc3d1f516,thread_XokBGAz2FEREpSWH6xSqz26C,united states,,2025-03-04 05:47:27.029693+00,2b5d4f41-5ba9-4c40-bcca-f6fdde21f8fb
+msg_IUtggvGszykvM3a1N4TEcxJ7,thread_XokBGAz2FEREpSWH6xSqz26C,"Here's some demographic information about the United States:
+
+- **Population**: 328,239,523 people (2019) [Source](https://saprismprodsea01.blob.core.windows.net/uploaded-files/AEPW_plastic_waste_generated.xlsx) (Quality Score: 99%)
+- **Rural Population**: 57,441,917 people (2019) [Source](https://saprismprodsea01.blob.core.windows.net/uploaded-files/AEPW_plastic_waste_generated.xlsx) (Quality Score: 99%)
+- **Urban Population**: 270,797,607 people (2019) [Source](https://saprismprodsea01.blob.core.windows.net/uploaded-files/AEPW_plastic_waste_generated.xlsx) (Quality Score: 99%)
+- **Coastal Population**: 112,925,034 people (2015) [Source](https://saprismprodsea01.blob.core.windows.net/uploaded-files/AEPW_plastic_waste_generated.xlsx) (Quality Score: 99%)
+- **Tourist Population**: 166,009,000 people (2019) [Source](https://saprismprodsea01.blob.core.windows.net/uploaded-files/AEPW_plastic_waste_generated.xlsx) (Quality Score: 99%)
+- **Population Density**: 35 people/sq. km (2019) [Source](https://saprismprodsea01.blob.core.windows.net/uploaded-files/AEPW_plastic_waste_generated.xlsx) (Quality Score: 99%)
+- **Gross Domestic Product (GDP)**: $21.4 trillion USD (2019) [Source](https://saprismprodsea01.blob.core.windows.net/uploaded-files/AEPW_plastic_waste_generated.xlsx) (Quality Score: 99%)
+- **Economic Status**: High Income (2023) [Source](https://saprismprodsea01.blob.core.windows.net/uploaded-files/World_Bank_Economic_Status.xlsx) (Quality Score: 90%)
+
+Please let me know if you need more specific information!",,2025-03-04 05:47:40.250752+00,AI
+c4df8caf-5eac-4ac4-9ba3-711cc9c06f0c,thread_XokBGAz2FEREpSWH6xSqz26C,how about plastic waste collected?,,2025-03-04 05:50:30.631267+00,2b5d4f41-5ba9-4c40-bcca-f6fdde21f8fb
+msg_GHUysnyZUuyynQGnTNHqfggO,thread_XokBGAz2FEREpSWH6xSqz26C,"In the United States, the plastic waste collected in the year 2020 was 33,800,000 metric tons. You can find more details from the [source document](https://saprismprodsea01.blob.core.windows.net/uploaded-files/Global_Plastics_Flow_Feb10_2020.pdf) (Quality Score: 58%).",,2025-03-04 05:50:37.05844+00,AI
+6116cb91-f402-485d-9634-858db4259061,thread_XokBGAz2FEREpSWH6xSqz26C,is this data actual or forecasted,,2025-03-04 05:53:36.195307+00,2b5d4f41-5ba9-4c40-bcca-f6fdde21f8fb
+msg_CR24b13W4kJ7ai5ku99NmEI2,thread_XokBGAz2FEREpSWH6xSqz26C,The data on plastic waste collected for the United States in 2020 is actual data.,,2025-03-04 05:53:38.874584+00,AI
+204720bc-9535-43dd-b37e-4f016961651b,thread_qoEkZImLbts97gNgsX7IEXT6,What about the USA?,,2025-03-04 05:59:47.534775+00,2b5d4f41-5ba9-4c40-bcca-f6fdde21f8fb
+msg_Y94Gkal9gEfFMnQjFP83xVDo,thread_qoEkZImLbts97gNgsX7IEXT6,"I am sorry, I do not have that information.",,2025-03-04 05:59:53.134651+00,AI
+2446b085-cb67-4232-a818-25499cd44851,thread_qoEkZImLbts97gNgsX7IEXT6,What about the United States? ,,2025-03-04 06:01:21.391369+00,2b5d4f41-5ba9-4c40-bcca-f6fdde21f8fb
+msg_5zgyU7oQXMb0ZTWbOevfWohw,thread_qoEkZImLbts97gNgsX7IEXT6,"I am sorry, I do not have that information.",,2025-03-04 06:01:26.437044+00,AI
+90b9c0b4-c4e8-41aa-ad6c-982f6309135f,thread_qoEkZImLbts97gNgsX7IEXT6,You don't have plastic leakage data for hte United States?,,2025-03-04 06:01:47.363679+00,2b5d4f41-5ba9-4c40-bcca-f6fdde21f8fb
+msg_DFhPDsBYxPv5RmrEc50syqGX,thread_qoEkZImLbts97gNgsX7IEXT6,I apologize for the inconvenience. It appears that I do not have the plastic leakage data for the United States at the moment.,,2025-03-04 06:01:50.000093+00,AI
+3fd88629-30f5-4915-bd83-0348ca766a59,thread_iamF94zliiYM4X0AZF7cv6rd,Show me statistics on Plastic Waste Generated,,2025-03-04 06:32:23.92275+00,7883d102-f642-450d-bbb0-99b4f0e834b7
+msg_S4zsmbsIWsLO2slDVHGxqf1F,thread_iamF94zliiYM4X0AZF7cv6rd,"Please provide a specific country for which you want the statistics on Plastic Waste Generated. 
+
+Meanwhile, here is the heatmap of Plastic Waste Generated.",,2025-03-04 06:32:30.296463+00,AI
+msg_rgujWR8otCBkFJt87D2GXk68,thread_GIFJxoSGo3AfB09Y2E37jKlo,"Could you please specify the country you are interested in? Meanwhile, here is a heatmap of Plastic Waste Generated.",,2025-03-04 06:33:25.947479+00,AI
+5e1f2f23-a25e-47b4-a7e1-6ecddf0443c9,thread_u0rbHZfg01SSMxhp7agZeiOX,Show me statistics on Plastic Waste Generated,,2025-03-04 06:35:09.346016+00,2b5d4f41-5ba9-4c40-bcca-f6fdde21f8fb
+msg_qDp6K5GdhNSvX5GPocFQIreq,thread_u0rbHZfg01SSMxhp7agZeiOX,"Please provide a country for the statistics on Plastic Waste Generated. 
+
+Additionally, here is the heatmap of Plastic Waste Generated.",,2025-03-04 06:35:15.624596+00,AI
+294e7f08-6fbb-417a-a581-614442419f16,thread_vb2eNeCWWwrO6PwwsaOf2eVk,Show me statistics on Plastic Waste Generated,,2025-03-04 06:36:06.040094+00,2b5d4f41-5ba9-4c40-bcca-f6fdde21f8f1
+msg_0cxbWHzF8StPOsSiGm0ITaQj,thread_vb2eNeCWWwrO6PwwsaOf2eVk,"I need the name of a country to provide you with the statistics on ""Plastic Waste Generated."" Meanwhile, you can view the heatmap of Plastic Waste Generated.",,2025-03-04 06:36:09.853353+00,AI
+08b7b16e-1146-4c32-8fe3-4e21637948d4,thread_GIFJxoSGo3AfB09Y2E37jKlo,show me statistics on platic waste generated,,2025-03-04 06:36:17.243809+00,2b5d4f41-5ba9-4c40-bcca-f6fdde21f8fb
+msg_NQY3tahecNGd0IIybrXqYV4M,thread_GIFJxoSGo3AfB09Y2E37jKlo,Could you please specify the country or location you are interested in to get statistics on Plastic Waste Generated?,,2025-03-04 06:36:19.764776+00,AI
+3059580d-4587-46df-a736-045ec26eadcd,thread_vb2eNeCWWwrO6PwwsaOf2eVk,USA,,2025-03-04 06:39:30.429156+00,2b5d4f41-5ba9-4c40-bcca-f6fdde21f8fb
+msg_XQe0lJnBYvOrwXBnUAHIF7kn,thread_vb2eNeCWWwrO6PwwsaOf2eVk,"There is currently no available data on ""Plastic Waste Generated"" for the USA.",,2025-03-04 06:39:38.07998+00,AI
+4a534c38-7e7f-45f3-96ef-0d92e8cc7ac8,thread_vb2eNeCWWwrO6PwwsaOf2eVk,Indonesia,,2025-03-04 06:39:47.892785+00,2b5d4f41-5ba9-4c40-bcca-f6fdde21f8fb
+msg_3j7WvdC6LzACfY7krlGMKLPd,thread_vb2eNeCWWwrO6PwwsaOf2eVk,"Here is the data on ""Plastic Waste Generated"" for Indonesia:
+
+| Year | Plastic Waste Generated (Metric Tons) | Quality Score (%) | Source |
+|------|--------------------------------------|-------------------|--------|
+| 2060 | 15,307,000                           | 19                | [LebretonAndrady2019_SummaryDatasheet.xlsx](https://saprismprodsea01.blob.core.windows.net/uploaded-files/LebretonAndrady2019_SummaryDatasheet.xlsx) |
+
+This data is forecasted.",,2025-03-04 06:39:54.972763+00,AI
+103d8a14-89c6-4551-8b8b-6eeb6b688f2a,thread_8Gn5E8ahX6aFgAYbEta1UeHV,Show me statistics on Plastic Waste Generated,,2025-03-04 06:40:45.285758+00,2b5d4f41-5ba9-4c40-bcca-f6fdde21f8fb
+msg_44UkHznuKUhOGDjf3R8ZO8SG,thread_8Gn5E8ahX6aFgAYbEta1UeHV,"{""action"":""show_heatmap"",""data"":{""data_source"":""Plastic Waste Generated""}}",,2025-03-04 06:40:49.897108+00,AI
+msg_N8vghEJsgv5JTqVESUGAwvqz,thread_8Gn5E8ahX6aFgAYbEta1UeHV,Here is the heatmap of Plastic Waste Generated. Please provide a country if you need detailed statistics.,,2025-03-04 06:40:50.3162+00,AI
+796fe59e-b85e-485c-9cd2-ce29aaad4f9e,thread_jWA2sgcYpOYRvbNJlrGRjL2L,What data do you have on plastic waste collected for indonesia?,,2025-03-04 13:37:15.774975+00,2b5d4f41-5ba9-4c40-bcca-f6fdde21f8fb
+msg_GCoEOaqcilXT6bZgvYcKZuEB,thread_jWA2sgcYpOYRvbNJlrGRjL2L,"Here is the forecasted data on plastic waste collected in Indonesia:
+
+| Year | Plastic Waste Collected (metric ton) | Quality Score (%) | Source |
+|------|-------------------------------------|-------------------|--------|
+| 2040 | 2.6                                 | 49                | [Systemiq_Optimal-EPR-in-Indonesia.pdf](https://saprismprodsea01.blob.core.windows.net/uploaded-files/Systemiq_Optimal-EPR-in-Indonesia.pdf) |
+
+The quality score reflects the reliability of the data source.",,2025-03-04 13:37:25.846505+00,AI
+e5f80e65-a6a2-4993-a008-960e5b99929b,thread_jWA2sgcYpOYRvbNJlrGRjL2L,Do you have data for the last 10 years?,,2025-03-04 13:37:46.954057+00,2b5d4f41-5ba9-4c40-bcca-f6fdde21f8fb
+msg_ek6dNBIFisMhqH1Pe6RSIlpO,thread_jWA2sgcYpOYRvbNJlrGRjL2L,"Here is the data on plastic waste collected in Indonesia over the last 10 years:
+
+| Year | Plastic Waste Collected (metric ton) | Quality Score (%) | Source |
+|------|-------------------------------------|-------------------|--------|
+| 2016 | 4,107,600                           | 98                | [AEPW Database](https://saprismprodsea01.blob.core.windows.net/uploaded-files/AEPW_plastic_waste_generated.xlsx) |
+| 2017 | 2,652,000                           | 99                | [AEPW Database](https://saprismprodsea01.blob.core.windows.net/uploaded-files/AEPW_plastic_waste_generated.xlsx) |
+| 2018 | 500,000.0                           | 43                | [Plastic Waste Management and Burden in Indonesia.pdf](https://saprismprodsea01.blob.core.windows.net/uploaded-files/Plastic%20Waste%20Management%20and%20Burden%20in%20Indonesia.pdf) |
+| 2019 | 8,000.0                             | 43                | [Pricing Transparency in the Recycled Plastics Supply Chain in India, Indonesia, Thailand, and Viet Nam.pdf](https://saprismprodsea01.blob.core.windows.net/uploaded-files/Pricing%20Transparency%20in%20the%20Recycled%20Plastics%20Supply%20Chain%20in%20India%2C%20Indonesia%2C%20Thailand%2C%20and%20Viet%20Nam.pdf) |
+| 2020 | 1,175,711.76                        | 78                | [P1790130109cb10a909d3209cc37ea6f789.pdf](https://saprismprodsea01.blob.core.windows.net/uploaded-files/P1790130109cb10a909d3209cc37ea6f789.pdf) |
+
+The quality scores reflect the reliability of the data sources.",,2025-03-04 13:38:00.123604+00,AI
+f0901f60-ddba-462d-94db-49555256039d,thread_jWA2sgcYpOYRvbNJlrGRjL2L,What data do you have on plastic waste collection rates for Indonesia?,,2025-03-04 13:53:06.77109+00,2b5d4f41-5ba9-4c40-bcca-f6fdde21f8fb
+msg_kQTSkRR47xDBeuZDJGXhCzPw,thread_jWA2sgcYpOYRvbNJlrGRjL2L,"Here is the forecasted data on plastic waste collected in Indonesia:
+
+| Year | Plastic Waste Collected (metric ton) | Quality Score (%) | Source |
+|------|-------------------------------------|-------------------|--------|
+| 2040 | 2.6                                 | 49                | [Systemiq_Optimal-EPR-in-Indonesia.pdf](https://saprismprodsea01.blob.core.windows.net/uploaded-files/Systemiq_Optimal-EPR-in-Indonesia.pdf) |
+
+The quality score reflects the reliability of the data source.",,2025-03-04 13:53:14.557282+00,AI
+b9a15a16-fa06-401a-b380-e41e11504b31,thread_jWA2sgcYpOYRvbNJlrGRjL2L,Do you have data for the last 10 years?,,2025-03-04 13:53:25.409087+00,2b5d4f41-5ba9-4c40-bcca-f6fdde21f8fb
+msg_8vzrKDepSALeuC63taq0M0OQ,thread_jWA2sgcYpOYRvbNJlrGRjL2L,"Here is the data on plastic waste collected in Indonesia over the last 10 years:
+
+| Year | Plastic Waste Collected (metric ton) | Quality Score (%) | Source |
+|------|-------------------------------------|-------------------|--------|
+| 2016 | 4,107,600                           | 98                | [AEPW Database](https://saprismprodsea01.blob.core.windows.net/uploaded-files/AEPW_plastic_waste_generated.xlsx) |
+| 2017 | 2,652,000                           | 99                | [AEPW Database](https://saprismprodsea01.blob.core.windows.net/uploaded-files/AEPW_plastic_waste_generated.xlsx) |
+| 2018 | 500,000.0                           | 43                | [Plastic Waste Management and Burden in Indonesia.pdf](https://saprismprodsea01.blob.core.windows.net/uploaded-files/Plastic%20Waste%20Management%20and%20Burden%20in%20Indonesia.pdf) |
+| 2019 | 8,000.0                             | 43                | [Pricing Transparency in the Recycled Plastics Supply Chain in India, Indonesia, Thailand, and Viet Nam.pdf](https://saprismprodsea01.blob.core.windows.net/uploaded-files/Pricing%20Transparency%20in%20the%20Recycled%20Plastics%20Supply%20Chain%20in%20India%2C%20Indonesia%2C%20Thailand%2C%20and%20Viet%20Nam.pdf) |
+| 2020 | 1,175,711.76                        | 78                | [P1790130109cb10a909d3209cc37ea6f789.pdf](https://saprismprodsea01.blob.core.windows.net/uploaded-files/P1790130109cb10a909d3209cc37ea6f789.pdf) |
+
+The quality scores reflect the reliability of the data sources.",,2025-03-04 13:53:35.987949+00,AI
+391de20f-07b5-4f8a-8a91-1bafc6145fe2,thread_UBP9TiqNtQ7rBAqfxJp6un7Y,What data do you have on plastic waste collection rates for Indonesia?,,2025-03-04 14:08:04.502674+00,2b5d4f41-5ba9-4c40-bcca-f6fdde21f8fb
+msg_NnhDG4vZPADe3pf5WE6oMSP6,thread_UBP9TiqNtQ7rBAqfxJp6un7Y,The data shows that the forecasted amount of plastic waste collected in Indonesia for the year 2040 is expected to be 2.6 metric tons. The quality score for this data is 49%. You can refer to the detailed document [here](https://saprismprodsea01.blob.core.windows.net/uploaded-files/Systemiq_Optimal-EPR-in-Indonesia.pdf).,,2025-03-04 14:08:09.18481+00,AI
+fae7370b-7072-41cf-8847-7047ad7d105b,thread_z8qmfk8j8UW6YK96Jen37IaD,Do you have data for the last 10 years?,,2025-03-04 14:09:05.482222+00,2b5d4f41-5ba9-4c40-bcca-f6fdde21f8fb
+msg_2LCi3WP7rnPpvipKfRAwIIkq,thread_z8qmfk8j8UW6YK96Jen37IaD,Could you please specify the type of data you are interested in so that I can provide you with the relevant information?,,2025-03-04 14:09:07.115973+00,AI
+348bafbb-8f43-4074-a286-dc19a76612d5,thread_z8qmfk8j8UW6YK96Jen37IaD,plastic waste data collected for indonesia in the last 10 years,,2025-03-04 14:09:23.017776+00,2b5d4f41-5ba9-4c40-bcca-f6fdde21f8fb
+msg_0q0etafpaghxqAkrmvyDb6Qz,thread_jL0ho7fQyxMQvkrpxkfoOb9i,The chart for Plastic Waste Generated in Russia between 2010 and 2025 has been generated successfully. Please click the button below to view the chart.,,2025-04-09 02:25:32.045706+00,AI
+12d19624-eea5-4198-abba-2a1f424d015b,thread_3FEHZ84evG5QY71Py4vWI0pq,Show me statistics on MSW Generated,,2025-04-13 15:11:30.661291+00,f038a24e-ebbf-4f16-910f-632c1085ef3f
+msg_ODFTpoF03m0xSNAtQs7G2lwk,thread_3FEHZ84evG5QY71Py4vWI0pq,"I am sorry, further information is needed to process the query, kindly provide the name of country.",,2025-04-13 15:11:34.695394+00,AI
+ba3b72a6-b008-44fd-b063-375b2b1db920,thread_3FEHZ84evG5QY71Py4vWI0pq,show me statistics for China on infrastructure,,2025-04-13 15:41:01.913646+00,f038a24e-ebbf-4f16-910f-632c1085ef3f
+msg_7adqzby5ligUDlxfA8woQj5J,thread_3FEHZ84evG5QY71Py4vWI0pq,"I am sorry, I do not have that information on infrastructure statistics for China.",,2025-04-13 15:41:07.532174+00,AI
+msg_JoQFuofBXJziii8Pa3PIlvMT,thread_z8qmfk8j8UW6YK96Jen37IaD,"Here is the data for Plastic Waste Collected in Indonesia over the past 10 years:
+
+| Year | Plastic Waste Collected (metric ton) | Source | Quality Score (%) |
+|------|--------------------------------------|--------|-------------------|
+| 2016 | 4,107,600                            | [AEPW Database](https://saprismprodsea01.blob.core.windows.net/uploaded-files/AEPW_plastic_waste_generated.xlsx) | 98 |
+| 2017 | 2,652,000                            | [AEPW Database](https://saprismprodsea01.blob.core.windows.net/uploaded-files/AEPW_plastic_waste_generated.xlsx) | 99 |
+| 2018 | 500,000                              | [Plastic Waste Management and Burden in Indonesia](https://saprismprodsea01.blob.core.windows.net/uploaded-files/Plastic%20Waste%20Management%20and%20Burden%20in%20Indonesia.pdf) | 43 |
+| 2019 | 8,000                                | [Pricing Transparency in the Recycled Plastics Supply Chain in India, Indonesia, Thailand, and Viet Nam](https://saprismprodsea01.blob.core.windows.net/uploaded-files/Pricing%20Transparency%20in%20the%20Recycled%20Plastics%20Supply%20Chain%20in%20India%2C%20Indonesia%2C%20Thailand%2C%20and%20Viet%20Nam.pdf) | 43 |
+| 2020 | 1,175,711.76                         | [World Bank Report](https://saprismprodsea01.blob.core.windows.net/uploaded-files/P1790130109cb10a909d3209cc37ea6f789.pdf) | 78 |
+
+Please let me know if you need further assistance!",,2025-03-04 14:09:31.904216+00,AI
+2f74ef85-46b7-4bd8-be4f-fe6bf4c40a2e,thread_EhMQ3RIr8uqQgxKAeSE64CTA,Show me statistics on Plastic Waste Collected,,2025-03-05 02:21:27.488345+00,2b5d4f41-5ba9-4c40-bcca-f6fdde21f8fb
+msg_L2B4j7BCyKxOixjC6V4Kfkct,thread_EhMQ3RIr8uqQgxKAeSE64CTA,I need the name of a country or specific location to provide you with the statistics on Plastic Waste Collected. Please provide more details.,,2025-03-05 02:21:31.936703+00,AI
+2d354aac-d3c3-42da-9af0-d2cd3f2cef11,thread_jjG5kYRO00JQxcTPPJst5bMZ,Show me statistics on MSW Collected,,2025-03-05 02:22:23.020279+00,2b5d4f41-5ba9-4c40-bcca-f6fdde21f8fb
+msg_louugkIWPogJDkIzxxNgs5g9,thread_jjG5kYRO00JQxcTPPJst5bMZ,Here is the heatmap of Municipal Solid Waste Collected. Could you please specify a country for more detailed statistics?,,2025-03-05 02:22:26.232369+00,AI
+3be9586b-df98-4cb7-93b0-b4cdf8dff0c7,thread_ZdqtvNWz8yeTLsd3EhZQnU9Z,Show me statistics on Plastic Waste Generated,,2025-03-05 02:26:44.432345+00,60fb0922-d29d-46fc-b874-87171112c027
+msg_r96mqiW5dWiWBPddHw2m1Avl,thread_ZdqtvNWz8yeTLsd3EhZQnU9Z,Please provide a specific country for which you would like to view the statistics on Plastic Waste Generated. Here is the heatmap of Plastic Waste Generated for your reference.,,2025-03-05 02:26:48.205755+00,AI
+5d5d6aaa-5a5b-45e9-84e3-b01e0312a991,thread_Yn3sQq5rJr4rLwuVhzl8Ekqr,Show me statistics on Plastic Waste Generated,,2025-03-10 02:59:42.738946+00,2b5d4f41-5ba9-4c40-bcca-f6fdde21f8fb
+msg_gVj6vdpTGCu0J1hPRqq1arHR,thread_Yn3sQq5rJr4rLwuVhzl8Ekqr,"Please provide a country, and I will show you the statistics on Plastic Waste Generated.",,2025-03-10 02:59:47.366752+00,AI
+841ac5d1-7b35-4335-8099-cd05247e5a09,thread_Yn3sQq5rJr4rLwuVhzl8Ekqr,USA,,2025-03-10 02:59:51.931138+00,2b5d4f41-5ba9-4c40-bcca-f6fdde21f8fb
+msg_31DlBsiYw0zNGO2gHyEc7fJZ,thread_Yn3sQq5rJr4rLwuVhzl8Ekqr,"Here are the statistics on Plastic Waste Generated in the USA:
+
+| Year | Plastic Waste Generated (metric ton) | Quality Score (%) | Source |
+|------|--------------------------------------|-------------------|--------|
+| 2060 | 38,905,000                           | 19                | [LebretonAndrady2019_SummaryDatasheet.xlsx](https://saprismprodsea01.blob.core.windows.net/uploaded-files/LebretonAndrady2019_SummaryDatasheet.xlsx) |
+
+This data is forecasted. Please let me know if you need further assistance!",,2025-03-10 03:00:01.671224+00,AI
+c2aaffe3-3e76-4411-8200-0897d4f164ab,thread_VMeOeucW4jBZGYdpVF3JAfmG,What is the PW generated trend in Indonesia over the past 10 years?,,2025-03-12 04:03:59.833551+00,2b5d4f41-5ba9-4c40-bcca-f6fdde21f8fb
+msg_Q4ajckUIX0w3JD9WruRQt6TI,thread_VMeOeucW4jBZGYdpVF3JAfmG,"Here is the trend of Plastic Waste Generated in Indonesia over the past 10 years:
+
+| Year | Plastic Waste Generated (metric ton) | Quality Score (%) | Source |
+|------|--------------------------------------|-------------------|--------|
+| 2016 | 9,128,000                           | 98                | [AEPW Database](https://saprismprodsea01.blob.core.windows.net/uploaded-files/AEPW_plastic_waste_generated.xlsx) |
+| 2017 | 6,800,000                           | 99                | [AEPW Database](https://saprismprodsea01.blob.core.windows.net/uploaded-files/AEPW_plastic_waste_generated.xlsx) |
+| 2018 | 9,310,000                           | 96                | [AEPW Database](https://saprismprodsea01.blob.core.windows.net/uploaded-files/AEPW_plastic_waste_generated.xlsx) |
+| 2019 | 9,394,000                           | 96                | [AEPW Database](https://saprismprodsea01.blob.core.windows.net/uploaded-files/AEPW_plastic_waste_generated.xlsx) |
+| 2020 | 7,820,000                           | 97                | [AEPW Database](https://saprismprodsea01.blob.core.windows.net/uploaded-files/AEPW_plastic_waste_generated.xlsx) |
+| 2021 | 9,590,000                           | 96                | [AEPW Database](https://saprismprodsea01.blob.core.windows.net/uploaded-files/AEPW_plastic_waste_generated.xlsx) |
+| 2022 | 9,688,000                           | 96                | [AEPW Database](https://saprismprodsea01.blob.core.windows.net/uploaded-files/AEPW_plastic_waste_generated.xlsx) |
+| 2023 | 9,786,000                           | 96                | [AEPW Database](https://saprismprodsea01.blob.core.windows.net/uploaded-files/AEPW_plastic_waste_generated.xlsx) |
+| 2024 | 9,884,000                           | 96                | [AEPW Database](https://saprismprodsea01.blob.core.windows.net/uploaded-files/AEPW_plastic_waste_generated.xlsx) |
+
+The data shows an initial dip in 2017, followed by a general upward trend over the following years.",,2025-03-12 04:04:12.484069+00,AI
+666fed17-dd0a-461b-92f3-029d211570df,thread_VMeOeucW4jBZGYdpVF3JAfmG,Generate a chart,,2025-03-12 04:04:17.87959+00,2b5d4f41-5ba9-4c40-bcca-f6fdde21f8fb
+msg_hEgXFMxpBJ8XbwXrhEqopUFN,thread_VMeOeucW4jBZGYdpVF3JAfmG,"The chart for Plastic Waste Generated in Indonesia between 2016 and 2025 has been generated successfully. Please click the button below to view the chart.
+
+[View Chart](sandbox:/workspace/a2c84532-a2c9-4723-a416-6beccadd4f9a)",,2025-03-12 04:04:25.324758+00,AI
+029cb579-e279-46f9-aec2-af29c1958dc5,thread_DgifaHDJlX5sA8GVyVE4I8W4,Show me statistics on Total Plastic Consumption,,2025-03-13 18:52:59.830911+00,875a5597-9b6b-40e0-99e6-5ce88b69489c
+msg_fCJrASZjuxYvCNymUDtyizbv,thread_DgifaHDJlX5sA8GVyVE4I8W4,Here is the heatmap of Total Plastic Consumption. Please provide a country if you need more specific data.,,2025-03-13 18:53:04.756697+00,AI
+60548cac-6a50-477f-be26-ef06c426b565,thread_jL0ho7fQyxMQvkrpxkfoOb9i,Show me statistics for Russia on Plastic Waste Generated,,2025-04-09 02:24:26.609964+00,2b5d4f41-5ba9-4c40-bcca-f6fdde21f8fb
+msg_5JDTygCd5yHCBZIIALypINcY,thread_jL0ho7fQyxMQvkrpxkfoOb9i,"Here are the statistics for Plastic Waste Generated in Russia:
+
+| Year | Plastic Waste Generated (Metric Tons) | Quality Score (%) | Source |
+|------|----------------------------------------|--------------------|--------|
+| 2020 | 4,190,000                              | 97                 | [AEPW Database](https://saprismprodsea01.blob.core.windows.net/uploaded-files/AEPW_plastic_waste_generated.xlsx) |",,2025-04-09 02:24:36.12204+00,AI
+19e8791a-56b4-43a8-80c5-078823635f4e,thread_jL0ho7fQyxMQvkrpxkfoOb9i,generate a graph ,,2025-04-09 02:24:57.131039+00,2b5d4f41-5ba9-4c40-bcca-f6fdde21f8fb
+msg_QNyOLEKtDapX8xNsjXItr7Ab,thread_jL0ho7fQyxMQvkrpxkfoOb9i,"To generate a graph, I need either a specific start and end year or a relative start year period for the data. Could you please provide that information?",,2025-04-09 02:25:04.73561+00,AI
+de7745e8-317a-4b94-b4ad-bd95eb42695c,thread_jL0ho7fQyxMQvkrpxkfoOb9i,between 2010 and 2025,,2025-04-09 02:25:25.580016+00,2b5d4f41-5ba9-4c40-bcca-f6fdde21f8fb
+234f5ff6-989d-4cea-918f-622fd5acc806,thread_laoFQVUVCU9yGlbYf5WDkgft,Show me statistics for United States on Plastic Waste Collected,,2025-05-14 13:05:40.104364+00,5016a768-c78e-49b8-a52c-6ac348431dbc
+msg_UOBWQ8U7KTLU9qereGkHTUmB,thread_laoFQVUVCU9yGlbYf5WDkgft,"Here are the statistics for the United States on Plastic Waste Collected:
+
+| Year | Plastic Waste Collected | Unit      | Quality Score (%) | Source                                                                 |
+|------|-------------------------|-----------|-------------------|------------------------------------------------------------------------|
+| 2020 | 33,800,000              | metric ton| 58                | [Global Plastics Flow Feb10 2020](https://saprismprodsea01.blob.core.windows.net/uploaded-files/Global_Plastics_Flow_Feb10_2020.pdf) |
+
+The data was collected directly from actual figures and reflects the status of plastic waste management in the United States for the year 2020.",,2025-05-14 13:05:47.978456+00,AI
+ea512fce-69df-4afc-a0b5-f71a893e2492,thread_laoFQVUVCU9yGlbYf5WDkgft,What types of plastics are collected in Germany? ,,2025-05-14 13:06:31.545768+00,5016a768-c78e-49b8-a52c-6ac348431dbc
+msg_xpvOU41opycw2RbNPHAv6Muw,thread_laoFQVUVCU9yGlbYf5WDkgft,"I am sorry, I do not have that information.",,2025-05-14 13:06:34.421992+00,AI
+35b429c3-17fc-4442-b15e-71b496698fb8,thread_laoFQVUVCU9yGlbYf5WDkgft,Show me statistics for Germany on Plastic Waste Generated,,2025-05-14 13:07:08.735551+00,5016a768-c78e-49b8-a52c-6ac348431dbc
+msg_1EXGZsLCmtPBE1RAJGNaCQp8,thread_laoFQVUVCU9yGlbYf5WDkgft,"Here are the statistics for Germany on Plastic Waste Generated:
+
+| Year | Plastic Waste Generated | Unit      | Quality Score (%) | Source                                                             |
+|------|-------------------------|-----------|-------------------|--------------------------------------------------------------------|
+| 2020 | 5,260,000               | metric ton| 97                | [AEPW Database](https://saprismprodsea01.blob.core.windows.net/uploaded-files/AEPW_plastic_waste_generated.xlsx) |
+
+The data was collected directly from actual figures and reflects the status of plastic waste generation in Germany for the year 2020.",,2025-05-14 13:07:19.464868+00,AI
+26105575-13ab-45d6-95bf-2ee714327420,thread_laoFQVUVCU9yGlbYf5WDkgft,how many sorting facilities are there in Brazil?,,2025-05-14 13:09:21.815237+00,5016a768-c78e-49b8-a52c-6ac348431dbc
+msg_KOtaHDPECpfiHwS6fCWXdcEw,thread_laoFQVUVCU9yGlbYf5WDkgft,"I am sorry, I do not have that information.",,2025-05-14 13:09:27.414832+00,AI
+07e51cf7-8b2c-4edc-858f-5c0d11e1cc48,thread_laoFQVUVCU9yGlbYf5WDkgft,How many sorting facilities are there in Germany? ,,2025-05-14 13:09:40.960432+00,5016a768-c78e-49b8-a52c-6ac348431dbc
+5f71f82c-6b4e-4ea5-8e8a-bba07ab77acd,thread_yp1H0HsJ4ydJLD1FLC09mM2g,What kind of data do you have for Taiwan?,,2025-07-24 16:47:27.738935+00,0dce6936-62f9-48be-b2cb-d907eecd8c53
+msg_qyqTEBeRgH5gYd3WSXPY2Mt1,thread_laoFQVUVCU9yGlbYf5WDkgft,"There are a total of 278 sorting facilities in Germany. Here are a few examples of these facilities:
+
+1. **BÜS - Bürgerservice GmbH**
+   - Location: Am Moselkai 1, 54293 Trier
+   - Source: [ENF Recycling](https://www.enfrecycling.com/)
+
+2. **Dettendorfer Rohrdorfer Wertstoff**
+   - Location: Linden 2, 83109 Tattenhausen
+   - Source: [ENF Recycling](https://www.enfrecycling.com/)
+
+3. **Chiemgau Altpapier GmbH**
+   - Location: Stefan-Flötzl-Str. 12, D-83342 Tacherting
+   - Source: [ENF Recycling](https://www.enfrecycling.com/)
+
+4. **Hündgen Entsorgungs GmbH & Co. KG**
+   - Location: Peterstraße 70, 53913 Swisttal
+   - Source: [ENF Recycling](https://www.enfrecycling.com/)
+
+5. **Degenkolbe Recycling GmbH**
+   - Location: Neckartalstraße 225, 70376 Stuttgart
+   - Source: [ENF Recycling](https://www.enfrecycling.com/)
+
+This is just a small selection of the available sorting facilities. Let me know if you need more detailed information about any specific facility.",,2025-05-14 13:09:49.62659+00,AI
+f419dcc6-84b7-4d49-8cc3-c537ccad13ae,thread_laoFQVUVCU9yGlbYf5WDkgft,What type of plastic is recycled in Germany?,,2025-05-14 13:12:46.379821+00,5016a768-c78e-49b8-a52c-6ac348431dbc
+msg_6EogSGYHZVqka7p97W3YZat3,thread_laoFQVUVCU9yGlbYf5WDkgft,"I am sorry, I do not have that information.",,2025-05-14 13:12:49.283934+00,AI
+eb79ef9d-674f-4765-8cf5-cad525e46cfa,thread_laoFQVUVCU9yGlbYf5WDkgft,How many countries in PRISM have data on the amount of plastic waste generated?,,2025-05-14 13:17:53.295657+00,5016a768-c78e-49b8-a52c-6ac348431dbc
+msg_lRPvocGzzpClsD7sfqS4MBOS,thread_laoFQVUVCU9yGlbYf5WDkgft,"I am sorry, I do not have that information.",,2025-05-14 13:17:56.99833+00,AI
+c0e6957f-293d-482e-9bff-1e5277af60c6,thread_dhXOXjTdGzGo7wrkOVMsBr7W,Show me statistics for Brazil on Plastic Waste Generated,,2025-05-19 13:15:05.936526+00,5016a768-c78e-49b8-a52c-6ac348431dbc
+msg_q6ZJFdICMNwjdb81Sde9ghEo,thread_dhXOXjTdGzGo7wrkOVMsBr7W,"Here are the statistics for plastic waste generated in Brazil:
+
+| Year | Plastic Waste Generated (Metric Ton) | Quality Score (%) | Source |
+|------|---------------------------------------|--------------------|--------|
+| 2020 | 10,849,597                            | 97                 | [AEPW Database](https://saprismprodsea01.blob.core.windows.net/uploaded-files/AEPW_plastic_waste_generated.xlsx) |
+
+Please let me know if you need further assistance.",,2025-05-19 13:15:15.173326+00,AI
+e3d54aa8-7b2c-4efa-bf21-7aeada71925a,thread_dhXOXjTdGzGo7wrkOVMsBr7W,How much plastic waste is generated in india in 2020?,,2025-05-19 13:24:54.663797+00,5016a768-c78e-49b8-a52c-6ac348431dbc
+msg_vbvEkAK18WQCpZ99uYurwhqe,thread_dhXOXjTdGzGo7wrkOVMsBr7W,"In 2020, India generated 21,800,000 metric tons of plastic waste. 
+
+- **Quality Score:** 97%
+- **Source:** [AEPW Database](https://saprismprodsea01.blob.core.windows.net/uploaded-files/AEPW_plastic_waste_generated.xlsx)
+
+If you need more information, feel free to ask!",,2025-05-19 13:25:01.306436+00,AI
+e5e877a7-c929-4c1b-b0de-5172d13912e5,thread_dhXOXjTdGzGo7wrkOVMsBr7W,how much plastic was recycled in india in 2020?,,2025-05-19 13:25:38.091331+00,5016a768-c78e-49b8-a52c-6ac348431dbc
+msg_uK5hOruYvUroLGe8zX7kM8b0,thread_dhXOXjTdGzGo7wrkOVMsBr7W,"I am sorry, I do not have that information.",,2025-05-19 13:25:43.667787+00,AI
+44b8cc3f-3641-4b82-a9ff-5f238f8ae7ba,thread_8lMbL9yUfrS2nwp8lirDLqw2,Show me statistics on Plastic Waste Generated,,2025-06-16 13:27:26.303379+00,0dce6936-62f9-48be-b2cb-d907eecd8c53
+msg_OGmjJ1Kg3BeKxUffaxbbAenY,thread_8lMbL9yUfrS2nwp8lirDLqw2,"Please provide a specific country you are interested in, and I will retrieve the statistics for Plastic Waste Generated. Meanwhile, here is the heatmap of Plastic Waste Generated.",,2025-06-16 13:27:30.438284+00,AI
+cc97ddd2-284f-49af-a7de-e11135feb8ae,thread_8lMbL9yUfrS2nwp8lirDLqw2,Brazil,,2025-06-16 13:27:40.561414+00,0dce6936-62f9-48be-b2cb-d907eecd8c53
+msg_Sy2n8bpKrSeP0jCefTeHRCJG,thread_8lMbL9yUfrS2nwp8lirDLqw2,"Here are the statistics for Plastic Waste Generated in Brazil for the year 2020:
+
+- **Value**: 10,849,597 metric tons
+- **Source**: [AEPW Database](https://saprismprodsea01.blob.core.windows.net/uploaded-files/AEPW_plastic_waste_generated.xlsx)
+- **Quality Score**: 97% 
+
+If you need further details or another data point, feel free to ask!",,2025-06-16 13:28:31.370683+00,AI
+6db98122-1b19-4bde-8573-ef80fdbbc886,thread_98fZVDkeL2SsiQM0EmTvSvh0,7. For which countries is there data on the amount of plastic waste generated?,,2025-07-01 15:06:20.259775+00,0dce6936-62f9-48be-b2cb-d907eecd8c53
+msg_q4bfZkyFPPImbad7rygaWaRy,thread_98fZVDkeL2SsiQM0EmTvSvh0,"I am sorry, I do not have that information.",,2025-07-01 15:06:21.465801+00,AI
+b775128c-7873-4bfe-8fdc-70665754cd2a,thread_98fZVDkeL2SsiQM0EmTvSvh0,"Girl this is your job, All of all the data for the countries ont the map, which show data that is non zero fr plastic waste collection ",,2025-07-01 15:07:11.884222+00,0dce6936-62f9-48be-b2cb-d907eecd8c53
+msg_Htk6meeTsSWdbydNsanrP6nT,thread_98fZVDkeL2SsiQM0EmTvSvh0,"I am sorry, I do not have that information.",,2025-07-01 15:07:14.675747+00,AI
+0905ed2a-bf47-4f9f-9c5e-9206b206a8cb,thread_98fZVDkeL2SsiQM0EmTvSvh0,Does India have plastic waste collection? ,,2025-07-01 15:07:34.092821+00,0dce6936-62f9-48be-b2cb-d907eecd8c53
+msg_9TrBCj3UMyolqQklz8z9qFnz,thread_98fZVDkeL2SsiQM0EmTvSvh0,I can check this for you. Please hold on for a moment while I retrieve the information.,,2025-07-01 15:07:37.54615+00,AI
+msg_99D9giL7jJzMR7U2dgHfKqUY,thread_98fZVDkeL2SsiQM0EmTvSvh0,"India does have data on plastic waste collection. In 2012, India collected 600,000 metric tons of plastic waste. This data is sourced from the AEPW Database, with a quality score of 98%. You can find more details by following the [source link](https://saprismprodsea01.blob.core.windows.net/uploaded-files/AEPW_plastic_waste_generated.xlsx).",,2025-07-01 15:07:41.680709+00,AI
+9114e90e-1b7b-4cf2-9d2a-bb3c597df888,thread_98fZVDkeL2SsiQM0EmTvSvh0,Now do it for all countries,,2025-07-01 15:08:09.037388+00,0dce6936-62f9-48be-b2cb-d907eecd8c53
+msg_HJV90grwTxAYxOX6c1CWFlO1,thread_98fZVDkeL2SsiQM0EmTvSvh0,"I am sorry, I do not have that information.",,2025-07-01 15:08:11.947947+00,AI
+e4c91bce-bcab-491b-92e3-6afdf801480d,thread_Dj2tqS2JlnMYxao0xFN0GORE,Do you have 2022 statistics on Maine?,,2025-07-03 16:42:16.224525+00,5016a768-c78e-49b8-a52c-6ac348431dbc
+msg_sO6OiSWLSavpXzNjLdedsgHB,thread_Dj2tqS2JlnMYxao0xFN0GORE,"I am sorry, I do not have that information.",,2025-07-03 16:42:17.200498+00,AI
+282240ef-f7fd-4100-8252-2b1d3738fb10,thread_Dj2tqS2JlnMYxao0xFN0GORE,State of disposal and recycling rate Maine,,2025-07-03 16:42:59.927782+00,5016a768-c78e-49b8-a52c-6ac348431dbc
+msg_auO69MGMtdfItfUEpAE2ZSeu,thread_Dj2tqS2JlnMYxao0xFN0GORE,"I am sorry, I do not have that information.",,2025-07-03 16:43:05.794588+00,AI
+4d1fbb1c-6940-4f4b-a065-284c3aba43bb,thread_p5z1lwa427iDYPZ8L4NHDYeF,What is the recycling rate of PE In Germany? ,,2025-07-21 17:40:56.158746+00,0dce6936-62f9-48be-b2cb-d907eecd8c53
+msg_AwN3syTjznKxm17oZJBxyBNQ,thread_p5z1lwa427iDYPZ8L4NHDYeF,"I am sorry, I do not have that information.",,2025-07-21 17:40:57.095157+00,AI
+5275e147-ff06-438b-98af-3787b873e47b,thread_p5z1lwa427iDYPZ8L4NHDYeF,What is the recycling rate of Plastic in Japan?,,2025-07-21 17:42:34.563125+00,0dce6936-62f9-48be-b2cb-d907eecd8c53
+msg_vSMgPaJy2FIsNBwWtq4nxo2Z,thread_p5z1lwa427iDYPZ8L4NHDYeF,"I am sorry, I do not have that information.",,2025-07-21 17:42:38.053855+00,AI
+msg_zN2AUDqTMgoOBykJ1uZe1CsQ,thread_yp1H0HsJ4ydJLD1FLC09mM2g,"I have data related to the following categories for Taiwan:
+
+- Waste Management: Including data on incineration, landfill types, composting, and more.
+- Waste Composition: Including data on the percentage composition of plastic, glass, metal, etc.
+- Total Plastic Consumption: Including data on different types of plastics and resins consumed.
+- Plastic Waste Leakage: Information on imported, exported, and mismanaged plastic waste.
+- Plastic Waste: Including data on plastic waste generated, collected, and per capita measurements.
+- Municipal Solid Waste: Including data on municipal solid waste generated and collected, both in total and per capita.
+- Demography: Including information on coastal population, rural and urban population, and tourist population.
+
+If you need specific information or statistics for any of these data types in Taiwan, please let me know, and I'll be happy to assist you further!",,2025-07-24 16:47:33.061409+00,AI
+5e76f69b-8593-4317-99bb-b2f96a736545,thread_yp1H0HsJ4ydJLD1FLC09mM2g,show me those number please.,,2025-07-24 16:47:59.504987+00,0dce6936-62f9-48be-b2cb-d907eecd8c53
+msg_RrayyRSeQ51AKo7Y9Xq2ps7g,thread_yp1H0HsJ4ydJLD1FLC09mM2g,"It seems that there is an issue accessing the data for Taiwan through the provided functions. However, I was able to retrieve demographic details for Taiwan:
+
+### Demographic Details for Taiwan
+- **Economic Status:** High Income
+- **Year:** 2023
+- **Source:** World Bank Economic Status
+- [View Source](https://saprismprodsea01.blob.core.windows.net/uploaded-files/World_Bank_Economic_Status.xlsx)
+- **Quality Score:** 90%
+
+Unfortunately, I wasn't able to gather information on waste management, waste composition, plastic consumption, plastic waste leakage, plastic waste, and municipal solid waste for Taiwan at this time.
+
+If you have specific queries or need assistance with another location or data type, please let me know!",,2025-07-24 16:50:06.841229+00,AI

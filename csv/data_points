@@ -1,0 +1,69 @@
+id,name,description,data_group,created_at
+9a7cda10-6217-44bd-8dbd-6ca38bf4dea3,Gross Domestic Product (GDP),GDP of the location,demographics,2024-12-18 07:55:31.524
+1eae03c9-3bfd-47b7-83d0-216f4f918664,Population,Population of the location,demographics,2024-12-18 07:55:31.524
+012f6c24-77c2-4d9c-8891-63acdc3bdd3d,Urban Population,Population of the location in urban area,demographics,2024-12-18 07:55:31.524
+ed5f3dae-c217-4ed5-b057-f17d763a7f7b,Rural Population,Population of the location in rural area,demographics,2024-12-18 07:55:31.524
+3b2672ab-5c6f-4f1b-b726-948b6d01a2ab,Population Density,Population density of the location,demographics,2024-12-18 07:55:31.524
+82c3ce23-8162-44ed-862d-5bd2c05ee891,Coastal Population,Population of the location in coastal area,demographics,2024-12-18 07:55:31.524
+aeaea345-6b75-40fb-b1f5-0fc9cf04e2dd,Tourist Population,Tourist population of the location,demographics,2024-12-18 07:55:31.524
+928ca2b7-8683-45d8-b75b-2d528bea9a3a,Plastic Waste Generated,Volume of plastic waste generated,pw_generated_collected,2024-12-18 07:55:31.524
+3d16ff6f-acc6-47bf-a3f0-a4169c1679bf,Plastic Waste Generated Per Capita,Volume of plastic waste generated per capita,pw_generated_collected,2024-12-18 07:55:31.524
+0c8bcc3b-8809-412c-9567-45a261f2c372,Plastic Waste Collected,Volume of plastic waste collected,pw_generated_collected,2024-12-18 07:55:31.524
+b89288f0-77ec-4a1e-a77d-f84aebab737e,Plastic Waste % Collected,Percentage of plastic waste collected over all MSW,pw_generated_collected,2024-12-18 07:55:31.524
+946b1bf0-815f-4b58-a8d3-a8903d7cc46c,Plastic Waste Formally Collected,Volume of plastic waste formally collected,pw_generated_collected,2024-12-18 07:55:31.524
+94a41ac8-c98c-4588-bae1-0c4023b2ea2c,Plastic Waste % Formally Collected,Percentage of plastic waste formally collected over all plastic waste,pw_generated_collected,2024-12-18 07:55:31.524
+f1c2959f-83ee-46e1-b607-2ac40e309686,Plastic Waste Informally Collected,Volume of plastic waste informally collected,pw_generated_collected,2024-12-18 07:55:31.524
+be4f0c3e-91fb-4064-a58d-47b964624351,Plastic Waste % Informally Collected,Percentage of plastic waste informally collected over all plastic waste,pw_generated_collected,2024-12-18 07:55:31.524
+414156b6-86c8-4742-8392-e2ea0a1503b0,Plastic Waste Collected For Recycling,Volume of plastic waste collected for recycling,pw_generated_collected,2024-12-18 07:55:31.524
+c2da7d13-6807-45ae-ac54-ff3dbdbb4284,Plastic Waste % Collected For Recycling,Percentage of plastic waste collected for recycling over all plastic waste,pw_generated_collected,2024-12-18 07:55:31.524
+014300a0-2f1e-4c0d-91e8-36c2885c6388,Plastic Waste Uncollected,Volume of plastic waste uncollected,pw_generated_collected,2024-12-18 07:55:31.524
+c26a808a-2f78-4a52-8feb-ec2fa1b9587d,Plastic Waste % Uncollected,Percentage of plastic waste uncollected over all MSW,pw_generated_collected,2024-12-18 07:55:31.524
+86c0d61c-2160-4449-ad61-fe0ffb477bf5,Municipal Solid Waste Generated,Volume of municipal solid waste generated,msw_generated_collected,2024-12-18 07:55:31.524
+3dbcad55-051b-4e10-857e-103369bce34c,Municipal Solid Waste Generated Per Capita,Volume of municipal solid waste generated per capita,msw_generated_collected,2024-12-18 07:55:31.524
+41c69951-0bdb-42f8-9bda-3177d2cab2a4,Municipal Solid Waste Collected,Volume of municipal solid waste collected,msw_generated_collected,2024-12-18 07:55:31.524
+3cbb3a7c-b487-408c-98e9-fc73dc3255f9,Municipal Solid Waste Collected Per Capita,Volume of municipal solid waste collected per capita,msw_generated_collected,2024-12-18 07:55:31.524
+fab98604-ffa4-4ed6-a65c-f0e1b85ae0bb,Open Dump,Percentage of waste that is processed by open dump,waste_management,2024-12-18 07:55:31.524
+c3eb92a0-8f06-407c-a2ab-df27ca5a919f,Incineration,Percentage of waste that is processed by incineration,waste_management,2024-12-18 07:55:31.524
+2fe046be-aa86-46ff-9922-c8f351e0d498,Digestion,Percentage of waste that is processed by digestion,waste_management,2024-12-18 07:55:31.524
+f562a731-bf18-4475-8f42-b89acb8a8f7d,Composting,Percentage of waste that is processed by composting,waste_management,2024-12-18 07:55:31.524
+92a88a4d-c9e8-4356-9b29-d1b31d75023f,Landfill,Percentage of waste that is processed by landfill,waste_management,2024-12-18 07:55:31.524
+6a88f339-1d58-4b93-a73b-62c7f082d53c,Uncontrolled Landfill,Percentage of waste that is processed by uncontrolled landfill,waste_management,2024-12-18 07:55:31.524
+4a9899ca-ba45-4e35-8fbc-b57631afccf7,Unspecified Landfill,Percentage of waste that is processed by unspecified landfill,waste_management,2024-12-18 07:55:31.524
+eb521da9-e5d9-4299-9a7a-d249995d285f,Controlled Landfill,Percentage of waste that is processed by controlled landfill,waste_management,2024-12-18 07:55:31.524
+1c07a156-2824-43b7-8319-a0cbf618da04,Waterways,Percentage of waste that is processed by waterways,waste_management,2024-12-18 07:55:31.524
+7c0bf130-441b-4c4b-b426-3ad8f4e5f0e3,Other,Percentage of waste that is processed by other,waste_management,2024-12-18 07:55:31.524
+6635290e-2bc2-4ae3-985f-051545c2b238,SUP Consumed,Volume of single-use plastic (SUP) consumption,plastic_consumption,2024-12-18 07:55:31.524
+8aa5f3a6-abc0-4efa-80e2-5c242212d9af,Rigid Plastic Consumed,Volume of rigid plastic consumption,plastic_consumption,2024-12-18 07:55:31.524
+337cbc3d-2453-402a-b93c-0415b580cee8,Flexible Plastic Consumed,Volume of flexible plastic consumption,plastic_consumption,2024-12-18 07:55:31.524
+cf0b5591-603d-4307-af35-6d6a4e7dc8c8,MLP Consumed,Volume of multi-layered plastic (MLP) consumption,plastic_consumption,2024-12-18 07:55:31.524
+5469cfac-b20b-496f-b0a2-84323434b68a,Other Plastic Consumed,Volume of other plastic consumption,plastic_consumption,2024-12-18 07:55:31.524
+5f99a3c8-2648-417c-8179-d58a63658455,Total Plastic Consumption,Volume of total plastic consumption,plastic_consumption,2024-12-18 07:55:31.524
+18b561f3-a645-41f3-9433-ff6b9bd0bf03,Polymer PET Consumed,Volume of polyethylene terephthalate (PET) polymer consumption,plastic_consumption,2024-12-18 07:55:31.524
+b919c338-acc6-4e89-99b5-c6b2e618e73b,Polymer HDPE Consumed,Volume of high-density polyethylene (HDPE) polymer consumption,plastic_consumption,2024-12-18 07:55:31.524
+4aa52ca8-8818-4c65-9ce8-16772a81ccd6,Polymer PVC Consumed,Volume of polyvinyl chloride (PVC) polymer consumption,plastic_consumption,2024-12-18 07:55:31.524
+b5f9d01c-d36f-4f46-ac10-d3fc42120941,Polymer LDPE Consumed,Volume of low-density polyethylene (LDPE) polymer consumption,plastic_consumption,2024-12-18 07:55:31.524
+2e311199-2081-4e9e-a2f7-a1f0be53c375,Polymer PP Consumed,Volume of polypropylene (PP) polymer consumption,plastic_consumption,2024-12-18 07:55:31.524
+0a57efb6-1a89-4a8f-9885-4cde3c876401,Polymer PS Consumed,Volume of polystyrene (PS) polymer consumption,plastic_consumption,2024-12-18 07:55:31.524
+c9c38a2a-142c-491b-830f-94f9f463d933,Other Polymer Consumed,Volume of other polymer consumption,plastic_consumption,2024-12-18 07:55:31.524
+d9f8c47e-6b79-4440-99c6-6988c90427d5,Total Polymer Consumption,Volume of total polymer consumption,plastic_consumption,2024-12-18 07:55:31.524
+87fa985f-b97a-432f-8f74-9a3a30887ed0,Resin PET Consumed,Volume of polyethylene terephthalate (PET) resin consumption,plastic_consumption,2024-12-18 07:55:31.524
+8c770b68-e6fc-45cc-97ea-06e225190b6b,Resin HDPE Consumed,Volume of high-density polyethylene (HDPE) resin consumption,plastic_consumption,2024-12-18 07:55:31.524
+c2666db4-ddbb-4c4b-8662-fa585b769a94,Resin PVC Consumed,Volume of polyvinyl chloride (PVC) resin consumption,plastic_consumption,2024-12-18 07:55:31.524
+82347c63-769c-4b61-8472-6ea3be8f8594,Resin LDPE Consumed,Volume of low-density polyethylene (LDPE) resin consumption,plastic_consumption,2024-12-18 07:55:31.524
+e3ba3e86-4b44-4672-acf2-17821746b0bc,Resin PP Consumed,Volume of polypropylene (PP) resin consumption,plastic_consumption,2024-12-18 07:55:31.524
+5ac3a46e-5823-401a-8b80-1394047bc13c,Resin PS Consumed,Volume of polystyrene (PS) resin consumption,plastic_consumption,2024-12-18 07:55:31.524
+83dbd8c1-50f0-46d3-ba91-fa8583eb0ae3,Other Resin Consumed,Volume of other resin consumption,plastic_consumption,2024-12-18 07:55:31.524
+0bf3c707-25b8-4dd3-b621-4b4f83002e9e,Total Resin Consumption,Volume of total resin consumption,plastic_consumption,2024-12-18 07:55:31.524
+b56feaf3-ffc3-4570-af45-1c6f81212d87,Plastic %,Percentage of plastic waste over all waste,waste_composition,2024-12-18 07:55:31.524
+a28125bd-1380-42c4-939d-a50772900e09,Organic %,Percentage of organic waste over all waste,waste_composition,2024-12-18 07:55:31.524
+928855a7-397d-4fb7-a283-3fa38d65f48c,Glass %,Percentage of glass waste over all waste,waste_composition,2024-12-18 07:55:31.524
+02a06a06-3984-4b59-b469-94fe892335f8,Paper %,Percentage of paper waste over all waste,waste_composition,2024-12-18 07:55:31.524
+6e649740-5fb4-4200-982a-7c2a6c2bcfe3,Metal %,Percentage of metal waste over all waste,waste_composition,2024-12-18 07:55:31.524
+12365bd3-315a-43c3-8252-45a83d1bbfe1,Other %,Percentage of other waste over all waste,waste_composition,2024-12-18 07:55:31.524
+923436a6-d5d6-46e7-ae98-581f80051ccd,Imported Plastic Waste,Volume of plastic waste imported to the location,pw_leakage,2024-12-18 07:55:31.524
+1f0b2bf2-17c9-4d96-a507-276b8d145b52,Exported Plastic Waste,Volume of plastic waste exported from the location,pw_leakage,2024-12-18 07:55:31.524
+e80783ee-caec-485f-8e46-de93e62f6649,Plastic Leakage,Volume of plastic leakage,pw_leakage,2024-12-18 07:55:31.524
+2b0af1f7-b390-4325-9b0a-2c96c82f6cf0,Plastic Leakage %,Percentage of plastic leakage over all plastic waste,pw_leakage,2024-12-18 07:55:31.524
+8f1f2769-0c6e-470d-b704-9304e1cb2c0d,Plastic Mismanaged,Volume of mismanaged plastic,pw_leakage,2024-12-18 07:55:31.524
+5b993338-f09e-4907-9f1c-bb79e01b8a54,Plastic Mismanaged %,Percentage of mismanaged plastic over all plastic waste,pw_leakage,2024-12-18 07:55:31.524
+2252ab8f-13ad-45f5-a4f1-738175e5ab96,Economic Status,Economic status of the location based on World Bank categorization,demographics,2024-12-18 07:55:31.524

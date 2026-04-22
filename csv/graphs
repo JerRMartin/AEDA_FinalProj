@@ -1,0 +1,4 @@
+id,start_year,end_year,countries,data_point,unit,created_at
+0e1d4b73-506e-4684-aa50-0b114ab8aa1f,2006,2025,{Indonesia},Plastic Waste Collected,metric ton,2025-03-04 05:40:49.219129
+a2c84532-a2c9-4723-a416-6beccadd4f9a,2016,2025,{Indonesia},Plastic Waste Generated,metric ton,2025-03-12 04:04:20.999741
+e178c6c3-d8f1-48c5-b1bc-cc1906541191,2010,2025,{Russia},Plastic Waste Generated,metric ton,2025-04-09 02:25:29.068053
