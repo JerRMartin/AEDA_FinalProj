@@ -1,7 +1,7 @@
 .stApp {
   background:
     radial-gradient(circle at top right, rgba(230, 181, 59, 0.18), transparent 28%),
-    linear-gradient(180deg, #f7f5f2 0%, #fcfbf8 100%);
+    linear-gradient(180deg, var(--light-bg) 0%, #fcfbf8 100%);
 }
 
 [data-testid="stSidebar"] {
@@ -9,7 +9,7 @@
 }
 
 [data-testid="stSidebar"] * {
-  color: #f7f5f2;
+  color: var(--light-bg);
 }
 
 .kpi-card {
@@ -23,7 +23,7 @@
 
 .kpi-label {
   font-size: 0.88rem;
-  color: #6b7b8c;
+  color: var(--muted-text);
   text-transform: uppercase;
   letter-spacing: 0.08em;
   margin-bottom: 0.55rem;
@@ -38,17 +38,17 @@
 
 .kpi-delta {
   margin-top: 0.65rem;
-  color: #457b9d;
+  color: var(--secondary-accent);
   font-size: 0.95rem;
 }
 
 .summary-banner {
-  background: rgb(29, 53, 87);
-  color: #f7f5f2;
+  background: var(--primary-accent);
+  color: var(--light-bg);
   border-radius: 16px;
   padding: 0.95rem 1rem;
   margin: 0.35rem 0 1rem 0;
-  border-left: 6px solid #e9c46a;
+  border-left: 6px solid var(--warm-accent);
 }
 
 div[data-testid="stMetric"] {
@@ -56,10 +56,19 @@ div[data-testid="stMetric"] {
 }
 
 h1, h2, h3 {
-  color: #17324d;
+  color: var(--text-dark);
   letter-spacing: -0.02em;
 }
 
 p, li, .stCaption {
   color: #324a5f;
+}
+
+button[data-baseweb="tab"] p {
+  color: #324a5f;
+  font-weight: 800;
+}
+
+div[data-testid="stTabs"] [data-baseweb="tab-highlight"] {
+  background-color: var(--warm-accent);
 }

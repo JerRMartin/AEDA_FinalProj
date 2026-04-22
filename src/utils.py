@@ -12,7 +12,7 @@ DATASET_SOURCE_TEXT = (
     "local PRISM production database export included in this project (`csv/` tables, exported April 15, 2026). "
     "No public dataset URL was provided with the export."
 )
-DEFAULT_TOP_N = 10
+DEFAULT_TOP_N = 12
 
 PRIMARY_ACCENT = "#1D3557"
 SECONDARY_ACCENT = "#457B9D"
@@ -23,6 +23,18 @@ LIGHT_BG = "#F7F5F2"
 CARD_BG = "#FFFFFF"
 TEXT_DARK = "#17324D"
 MUTED_TEXT = "#6B7B8C"
+
+_CSS_VARS: dict[str, str] = {
+    "--primary-accent": PRIMARY_ACCENT,
+    "--secondary-accent": SECONDARY_ACCENT,
+    "--highlight": HIGHLIGHT,
+    "--warm-accent": WARM_ACCENT,
+    "--soft-red": SOFT_RED,
+    "--light-bg": LIGHT_BG,
+    "--card-bg": CARD_BG,
+    "--text-dark": TEXT_DARK,
+    "--muted-text": MUTED_TEXT,
+}
 
 APP_TEMPLATE = "plotly_white"
 QUALITY_SCALE = [
@@ -85,7 +97,8 @@ def format_percent(value: Optional[float]) -> str:
 
 def inject_custom_css(css_path: Path) -> None:
     if css_path.exists():
-        st.markdown(f"<style>{css_path.read_text()}</style>", unsafe_allow_html=True)
+        root_block = ":root {\n" + "".join(f"  {k}: {v};\n" for k, v in _CSS_VARS.items()) + "}\n"
+        st.markdown(f"<style>{root_block}{css_path.read_text()}</style>", unsafe_allow_html=True)
 
 
 def render_kpi_card(label: str, value: str, delta: str) -> None:
