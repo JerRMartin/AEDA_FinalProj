@@ -1,6 +1,6 @@
 .stApp {
   background:
-    radial-gradient(circle at top right, rgba(233, 196, 106, 0.18), transparent 28%),
+    radial-gradient(circle at top right, rgba(230, 181, 59, 0.18), transparent 28%),
     linear-gradient(180deg, #f7f5f2 0%, #fcfbf8 100%);
 }
 
@@ -43,7 +43,7 @@
 }
 
 .summary-banner {
-  background: rgba(29, 53, 87, 0.92);
+  background: rgb(29, 53, 87);
   color: #f7f5f2;
   border-radius: 16px;
   padding: 0.95rem 1rem;

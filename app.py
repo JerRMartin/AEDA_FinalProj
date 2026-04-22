@@ -91,7 +91,7 @@ def render_header() -> None:
 def render_sidebar(df: pd.DataFrame) -> None:
     st.sidebar.header("Filter Panel")
 
-    if st.sidebar.button("Reset filters", use_container_width=True, type="primary"):
+    if st.sidebar.button("Reset filters", use_container_width=True, type="secondary"):
         reset_filters(df)
 
     st.sidebar.multiselect(
