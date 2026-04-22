@@ -5,8 +5,8 @@ import pandas as pd
 import streamlit as st
 
 
-APP_TITLE = "PRISM Evidence Analytics Dashboard"
-DATASET_NAME = "PRISM Database Export"
+APP_TITLE = "Plastics Recovery Insights Steering Model (PRISM) Evidence Analytics Dashboard"
+DATASET_NAME = "PRISM Dataset"
 APP_SUBTITLE = "An exploratory dashboard for analyzing evidence quality, coverage, and temporal patterns"
 DATASET_SOURCE_TEXT = (
     "local PRISM production database export included in this project (`csv/` tables, exported April 15, 2026). "

@@ -12,7 +12,7 @@ from src.charts import (
     create_scatter_chart,
     create_trend_chart,
 )
-from src.data_loader import get_analysis_dataset, get_data_dictionary
+from src.data_loader import get_analysis_dataset, get_data_dictionary, get_key_terms
 from src.metrics import build_insight_text, compute_kpis
 from src.utils import (
     APP_SUBTITLE,
@@ -87,6 +87,9 @@ def render_header() -> None:
     with st.expander("Data dictionary for dashboard fields"):
         st.dataframe(get_data_dictionary(), use_container_width=True, hide_index=True)
 
+    st.markdown("### Key Terms")
+    with st.expander("Key terms and abbreviations used in the dashboard"):
+        st.dataframe(get_key_terms(), use_container_width=True, hide_index=True)
 
 def render_sidebar(df: pd.DataFrame) -> None:
     st.sidebar.header("Filter Panel")

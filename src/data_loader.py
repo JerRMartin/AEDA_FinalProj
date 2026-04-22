@@ -45,5 +45,15 @@ def get_data_dictionary() -> pd.DataFrame:
         ("validation_status", "Whether the extraction is validated in the export."),
         ("document_name", "Original source document name."),
         ("organization_country", "Publisher country field from the documents table."),
+        ("VALIDATED", "The extraction has been reviewed and approved by a human analyst in PRISM, as indicated by a non-null validated_by user ID."),
+        ("UNVALIDATED", "The extraction was created and logged a processing timestamp (validated_at), but no human reviewer has approved it (validated_by is null)."),
     ]
     return pd.DataFrame(records, columns=["Field", "Description"])
+
+def get_key_terms() -> pd.DataFrame:
+    records = [
+        ("MSW", "Municipal Solid Waste"),
+        ("PRISM", "Plastics Recovery Insights Steering Model"),
+        ("PW", "Plastic Waste"),
+    ]
+    return pd.DataFrame(records, columns=["Term", "Definition"])

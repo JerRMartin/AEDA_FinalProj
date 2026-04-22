@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(awk -F, 'NR==1{for\\(i=1;i<=NF;i++\\) if\\($i==\"validation_status\"||$i==\"validated_at\"||$i==\"validated_by\"||$i==\"created_by\"\\) printf \"%d:%s \", i,$i; print \"\"}' c:/Users/jerem/Documents/GitHub/AEDA_FinalProj/csv/data_extractions)"
+    ]
+  }
+}
