@@ -13,6 +13,24 @@ REQUIRED_TABLES = {
     "locations": "csv/locations",
 }
 
+# Each entry: (tab_label, csv_file_name, columns_to_exclude)
+RAW_TABLE_TABS = [
+    ("Chat Messages",    "chat_messages",    []),
+    ("Data Extractions", "data_extractions", []),
+    ("Data Points",      "data_points",      []),
+    ("Documents",        "documents",        []),
+    ("Graphs",           "graphs",           []),
+    ("Infrastructures",  "infrastructures",  []),
+    ("Locations",        "locations",        []),
+    ("Organizations",    "organization",     []),
+    ("Projects",         "projects",         []),
+]
+
+
+@st.cache_data(show_spinner=False)
+def load_raw_table(base_path: Path, name: str) -> pd.DataFrame:
+    return pd.read_csv(base_path / "csv" / name)
+
 
 @st.cache_data(show_spinner="Loading and preprocessing PRISM tables...")
 def load_raw_tables(base_path: Path) -> dict[str, pd.DataFrame]:
@@ -50,10 +68,89 @@ def get_data_dictionary() -> pd.DataFrame:
     ]
     return pd.DataFrame(records, columns=["Field", "Description"])
 
-def get_key_terms() -> pd.DataFrame:
-    records = [
+_KEY_TERMS_BY_TAB: dict[str, list[tuple[str, str]]] = {
+    "Chat Messages": [
         ("MSW", "Municipal Solid Waste"),
         ("PRISM", "Plastics Recovery Insights Steering Model"),
         ("PW", "Plastic Waste"),
-    ]
-    return pd.DataFrame(records, columns=["Term", "Definition"])
+    ],
+    "Data Extractions": [
+        ("BAU", "Business As Usual"),
+        ("MSW", "Municipal Solid Waste"),
+        ("PW", "Plastic Waste"),
+    ],
+    "Data Points": [
+        ("HDPE", "High-Density Polyethylene"),
+        ("LDPE", "Low-Density Polyethylene"),
+        ("MLP", "Multi-Layered Plastic"),
+        ("MSW", "Municipal Solid Waste"),
+        ("PET", "Polyethylene Terephthalate"),
+        ("PP", "Polypropylene"),
+        ("PS", "Polystyrene"),
+        ("PVC", "Polyvinyl Chloride"),
+        ("PW", "Plastic Waste"),
+        ("SUP", "Single-Use Plastic"),
+    ],
+    "Documents": [
+        ("AEPW", "Alliance to End Plastic Waste"),
+        ("CPCB", "Central Pollution Control Board"),
+        ("CSIRO", "Commonwealth Scientific and Industrial Research Organisation"),
+        ("EDA", "Exploratory Data Analysis"),
+        ("EPA", "Environmental Protection Agency"),
+        ("GIZ", "Deutsche Gesellschaft für Internationale Zusammenarbeit"),
+        ("IUCN", "International Union for Conservation of Nature"),
+        ("NGO", "Non-Governmental Organization"),
+        ("OECD", "Organisation for Economic Co-operation and Development"),
+        ("UNCRD", "United Nations Centre for Regional Development"),
+        ("UNEP", "United Nations Environment Programme"),
+    ],
+    "Graphs": [
+        ("MSW", "Municipal Solid Waste"),
+        ("PW", "Plastic Waste"),
+    ],
+    "Infrastructures": [
+        ("ABS", "Acrylonitrile Butadiene Styrene"),
+        ("HDPE", "High-Density Polyethylene"),
+        ("LDPE", "Low-Density Polyethylene"),
+        ("PC", "Polycarbonate"),
+        ("PET", "Polyethylene Terephthalate"),
+        ("PP", "Polypropylene"),
+        ("PS", "Polystyrene"),
+        ("PVC", "Polyvinyl Chloride"),
+    ],
+    "Locations": [
+        ("AEPW", "Alliance to End Plastic Waste"),
+    ],
+    "Organizations": [
+        ("AEPW", "Alliance to End Plastic Waste"),
+    ],
+    "Projects": [
+        ("AEPW", "Alliance to End Plastic Waste"),
+        ("GDP", "Gross Domestic Product"),
+        ("ISWM", "Integrated Solid Waste Management"),
+        ("IWC", "Informal Waste Collector"),
+        ("MSW", "Municipal Solid Waste"),
+        ("MVP", "Minimum Viable Product"),
+        ("PCR", "Post-Consumer Recycled"),
+        ("PCX", "Plastic Credit Exchange"),
+        ("PRISM", "Plastics Recovery Insights Steering Model"),
+        ("PW", "Plastic Waste"),
+        ("TCI", "The Circulate Initiative"),
+        ("WaCT", "Waste Wise City Tool"),
+    ],
+}
+
+
+def get_key_terms(tab: str | None = None) -> pd.DataFrame:
+    if tab is not None:
+        rows = _KEY_TERMS_BY_TAB.get(tab, [])
+    else:
+        seen: set[str] = set()
+        rows = []
+        for terms in _KEY_TERMS_BY_TAB.values():
+            for term, definition in terms:
+                if term not in seen:
+                    seen.add(term)
+                    rows.append((term, definition))
+        rows.sort(key=lambda x: x[0])
+    return pd.DataFrame(rows, columns=["Term", "Definition"])

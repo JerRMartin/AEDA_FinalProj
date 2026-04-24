@@ -2,11 +2,14 @@ import numpy as np
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
+from wordcloud import STOPWORDS, WordCloud
 
 from src.utils import (
     APP_TEMPLATE,
+    HIGHLIGHT,
     PRIMARY_ACCENT,
     QUALITY_SCALE,
+    SECONDARY_ACCENT,
     STATUS_COLOR_MAP,
     build_color_map,
 )
@@ -32,122 +35,6 @@ def _empty_figure(title: str, message: str) -> go.Figure:
         ],
         height=420,
     )
-    return fig
-
-
-def create_bar_chart(df: pd.DataFrame, top_n: int = 10) -> go.Figure:
-    chart_df = (
-        df.groupby("data_point_name", as_index=False)
-        .agg(observations=("extraction_id", "count"))
-        .sort_values("observations", ascending=False)
-        .head(top_n)
-    )
-    chart_df = chart_df.sort_values("observations", ascending=True)
-
-    fig = px.bar(
-        chart_df,
-        x="observations",
-        y="data_point_name",
-        orientation="h",
-        text="observations",
-        color="observations",
-        color_continuous_scale=QUALITY_SCALE,
-        template=APP_TEMPLATE,
-        labels={
-            "observations": "Number of extraction records",
-            "data_point_name": "Data point",
-        },
-        title="Most Frequent Indicators in the Filtered View",
-    )
-    fig.update_traces(
-        hovertemplate="<b>%{y}</b><br>Observations: %{x:,}<extra></extra>",
-        texttemplate="%{text:,}",
-        textposition="outside",
-        marker_line_width=0,
-    )
-    fig.update_layout(coloraxis_showscale=False, height=430)
-    return fig
-
-
-def create_donut_chart(df: pd.DataFrame) -> go.Figure:
-    chart_df = (
-        df["validation_status"]
-        .value_counts(dropna=False)
-        .rename_axis("validation_status")
-        .reset_index(name="records")
-    )
-    fig = px.pie(
-        chart_df,
-        names="validation_status",
-        values="records",
-        hole=0.58,
-        color="validation_status",
-        color_discrete_map=STATUS_COLOR_MAP,
-        template=APP_TEMPLATE,
-        title="Validation Composition of Visible Records",
-    )
-    fig.update_traces(
-        textposition="inside",
-        textinfo="percent+label",
-        hovertemplate="<b>%{label}</b><br>Records: %{value:,}<br>Share: %{percent}<extra></extra>",
-    )
-    fig.update_layout(
-        height=430,
-        legend_title_text="Validation status",
-    )
-    return fig
-
-
-def create_distribution_chart(df: pd.DataFrame) -> go.Figure:
-    fig = px.histogram(
-        df,
-        x="overall_quality_score",
-        color="validation_status",
-        nbins=18,
-        barmode="overlay",
-        opacity=0.72,
-        color_discrete_map=STATUS_COLOR_MAP,
-        template=APP_TEMPLATE,
-        title="Distribution of Overall Quality Scores",
-        labels={
-            "overall_quality_score": "Overall quality score",
-            "count": "Number of records",
-        },
-    )
-    fig.update_traces(
-        hovertemplate="Quality score bin: %{x}<br>Records: %{y:,}<br>Status: %{fullData.name}<extra></extra>"
-    )
-    fig.update_layout(height=420, legend_title_text="Validation status")
-    return fig
-
-
-def create_box_plot(df: pd.DataFrame) -> go.Figure:
-    order = (
-        df.groupby("data_group")["overall_quality_score"]
-        .median()
-        .sort_values(ascending=False)
-        .index
-        .tolist()
-    )
-    fig = px.box(
-        df,
-        x="data_group",
-        y="overall_quality_score",
-        color="data_group",
-        category_orders={"data_group": order},
-        color_discrete_map=build_color_map(order),
-        template=APP_TEMPLATE,
-        title="Quality Score Spread Across PRISM Data Groups",
-        labels={
-            "data_group": "Data group",
-            "overall_quality_score": "Overall quality score",
-        },
-        points="outliers",
-    )
-    fig.update_traces(
-        hovertemplate="<b>%{x}</b><br>Quality score: %{y:.1f}<extra></extra>"
-    )
-    fig.update_layout(height=430, showlegend=False)
     return fig
 
 
@@ -307,4 +194,463 @@ def create_trend_chart(df: pd.DataFrame) -> go.Figure:
         legend=dict(title="Series", orientation="h", y=1.1, x=0),
         height=460,
     )
+    return fig
+
+
+# ── Chat Messages ──────────────────────────────────────────────────────────────
+
+def create_messages_timeline(df: pd.DataFrame) -> go.Figure:
+    timeline = (
+        df.assign(date=pd.to_datetime(df["created_at"], utc=True).dt.date)
+        .groupby("date", as_index=False)
+        .size()
+        .rename(columns={"size": "messages"})
+    )
+    fig = px.bar(
+        timeline,
+        x="date",
+        y="messages",
+        template=APP_TEMPLATE,
+        title="Messages per Day",
+        labels={"date": "Date", "messages": "Messages"},
+        color_discrete_sequence=[PRIMARY_ACCENT],
+    )
+    fig.update_traces(hovertemplate="Date: %{x}<br>Messages: %{y:,}<extra></extra>")
+    fig.update_layout(height=380)
+    return fig
+
+
+def create_message_sender_donut(df: pd.DataFrame) -> go.Figure:
+    counts = (
+        df["created_by"]
+        .map(lambda x: "AI" if x == "AI" else "Human")
+        .value_counts()
+        .rename_axis("sender")
+        .reset_index(name="count")
+    )
+    fig = px.pie(
+        counts,
+        names="sender",
+        values="count",
+        hole=0.58,
+        color="sender",
+        color_discrete_map={"AI": PRIMARY_ACCENT, "Human": SECONDARY_ACCENT},
+        template=APP_TEMPLATE,
+        title="AI vs. Human Messages",
+    )
+    fig.update_traces(
+        textposition="inside",
+        textinfo="percent+label",
+        hovertemplate="<b>%{label}</b><br>Messages: %{value:,}<br>Share: %{percent}<extra></extra>",
+    )
+    fig.update_layout(height=380)
+    return fig
+
+
+def create_message_wordcloud(df: pd.DataFrame) -> go.Figure:
+    text = " ".join(df["message"].dropna().astype(str))
+    wc = WordCloud(
+        width=800,
+        height=380,
+        background_color="white",
+        stopwords=STOPWORDS,
+        colormap="Blues",
+        max_words=100,
+        collocations=False,
+    ).generate(text)
+
+    fig = px.imshow(wc.to_array(), template=APP_TEMPLATE, title="Most Used Words in Messages")
+    fig.update_layout(
+        height=380,
+        xaxis=dict(visible=False),
+        yaxis=dict(visible=False),
+        margin=dict(l=0, r=0, t=40, b=0),
+    )
+    fig.update_traces(hoverinfo="skip", hovertemplate=None)
+    return fig
+
+
+# ── Data Extractions ───────────────────────────────────────────────────────────
+
+def create_extractions_by_year(df: pd.DataFrame) -> go.Figure:
+    chart_df = (
+        df.groupby("year", as_index=False)
+        .size()
+        .rename(columns={"size": "extractions"})
+        .sort_values("year")
+    )
+    fig = px.bar(
+        chart_df,
+        x="year",
+        y="extractions",
+        template=APP_TEMPLATE,
+        title="Extractions by Reported Year",
+        labels={"year": "Year", "extractions": "Extractions"},
+        color="extractions",
+        color_continuous_scale=QUALITY_SCALE,
+    )
+    fig.update_traces(hovertemplate="Year: %{x}<br>Extractions: %{y:,}<extra></extra>")
+    fig.update_layout(height=380, coloraxis_showscale=False)
+    return fig
+
+
+def create_extraction_validation_donut(df: pd.DataFrame) -> go.Figure:
+    counts = (
+        df["validation_status"]
+        .value_counts(dropna=False)
+        .rename_axis("status")
+        .reset_index(name="count")
+    )
+    fig = px.pie(
+        counts,
+        names="status",
+        values="count",
+        hole=0.58,
+        color="status",
+        color_discrete_map=STATUS_COLOR_MAP,
+        template=APP_TEMPLATE,
+        title="Validation Status Breakdown",
+    )
+    fig.update_traces(
+        textposition="inside",
+        textinfo="percent+label",
+        hovertemplate="<b>%{label}</b><br>Count: %{value:,}<extra></extra>",
+    )
+    fig.update_layout(height=380, legend_title_text="Status")
+    return fig
+
+
+def create_extraction_quality_histogram(df: pd.DataFrame) -> go.Figure:
+    fig = px.histogram(
+        df.dropna(subset=["overall_quality_score"]),
+        x="overall_quality_score",
+        nbins=20,
+        template=APP_TEMPLATE,
+        title="Overall Quality Score Distribution",
+        labels={"overall_quality_score": "Overall quality score", "count": "Extractions"},
+        color_discrete_sequence=[PRIMARY_ACCENT],
+    )
+    fig.update_traces(hovertemplate="Score bin: %{x}<br>Count: %{y:,}<extra></extra>")
+    fig.update_layout(height=380)
+    return fig
+
+
+# ── Data Points ────────────────────────────────────────────────────────────────
+
+def create_data_points_by_group(df: pd.DataFrame) -> go.Figure:
+    chart_df = (
+        df.groupby("data_group", as_index=False)
+        .size()
+        .rename(columns={"size": "count"})
+        .sort_values("count", ascending=True)
+    )
+    fig = px.bar(
+        chart_df,
+        x="count",
+        y="data_group",
+        orientation="h",
+        text="count",
+        template=APP_TEMPLATE,
+        title="Data Points by Group",
+        labels={"count": "Data points", "data_group": "Data group"},
+        color="count",
+        color_continuous_scale=QUALITY_SCALE,
+    )
+    fig.update_traces(
+        textposition="outside",
+        hovertemplate="<b>%{y}</b><br>Count: %{x:,}<extra></extra>",
+    )
+    fig.update_layout(height=420, coloraxis_showscale=False)
+    return fig
+
+
+# ── Documents ──────────────────────────────────────────────────────────────────
+
+def create_documents_by_filetype(df: pd.DataFrame) -> go.Figure:
+    chart_df = (
+        df["file_type"]
+        .value_counts()
+        .rename_axis("file_type")
+        .reset_index(name="count")
+    )
+    fig = px.bar(
+        chart_df,
+        x="file_type",
+        y="count",
+        text="count",
+        template=APP_TEMPLATE,
+        title="Documents by File Type",
+        labels={"file_type": "File type", "count": "Documents"},
+        color="count",
+        color_continuous_scale=QUALITY_SCALE,
+    )
+    fig.update_traces(
+        textposition="outside",
+        hovertemplate="<b>%{x}</b><br>Documents: %{y:,}<extra></extra>",
+    )
+    fig.update_layout(height=380, coloraxis_showscale=False)
+    return fig
+
+
+def create_documents_by_year(df: pd.DataFrame) -> go.Figure:
+    chart_df = (
+        df.dropna(subset=["reported_year"])
+        .groupby("reported_year", as_index=False)
+        .size()
+        .rename(columns={"size": "count"})
+        .sort_values("reported_year")
+    )
+    fig = px.bar(
+        chart_df,
+        x="reported_year",
+        y="count",
+        template=APP_TEMPLATE,
+        title="Documents by Reported Year",
+        labels={"reported_year": "Reported year", "count": "Documents"},
+        color="count",
+        color_continuous_scale=QUALITY_SCALE,
+    )
+    fig.update_traces(hovertemplate="Year: %{x}<br>Documents: %{y:,}<extra></extra>")
+    fig.update_layout(height=380, coloraxis_showscale=False)
+    return fig
+
+
+def create_documents_by_country(df: pd.DataFrame, top_n: int = 15) -> go.Figure:
+    chart_df = (
+        df["organization_country"]
+        .value_counts()
+        .head(top_n)
+        .rename_axis("country")
+        .reset_index(name="count")
+        .sort_values("count", ascending=True)
+    )
+    fig = px.bar(
+        chart_df,
+        x="count",
+        y="country",
+        orientation="h",
+        text="count",
+        template=APP_TEMPLATE,
+        title=f"Top {top_n} Publisher Countries",
+        labels={"count": "Documents", "country": "Country"},
+        color="count",
+        color_continuous_scale=QUALITY_SCALE,
+    )
+    fig.update_traces(
+        textposition="outside",
+        hovertemplate="<b>%{y}</b><br>Documents: %{x:,}<extra></extra>",
+    )
+    fig.update_layout(height=500, coloraxis_showscale=False)
+    return fig
+
+
+# ── Infrastructures ────────────────────────────────────────────────────────────
+
+def create_infra_by_type(df: pd.DataFrame) -> go.Figure:
+    chart_df = (
+        df["infra_type"]
+        .value_counts()
+        .rename_axis("type")
+        .reset_index(name="count")
+        .sort_values("count", ascending=True)
+    )
+    fig = px.bar(
+        chart_df,
+        x="count",
+        y="type",
+        orientation="h",
+        text="count",
+        template=APP_TEMPLATE,
+        title="Infrastructure by Type",
+        labels={"count": "Sites", "type": "Infrastructure type"},
+        color="count",
+        color_continuous_scale=QUALITY_SCALE,
+    )
+    fig.update_traces(
+        textposition="outside",
+        hovertemplate="<b>%{y}</b><br>Sites: %{x:,}<extra></extra>",
+    )
+    fig.update_layout(height=400, coloraxis_showscale=False)
+    return fig
+
+
+def create_infra_by_status(df: pd.DataFrame) -> go.Figure:
+    counts = (
+        df["active_status"]
+        .value_counts()
+        .rename_axis("status")
+        .reset_index(name="count")
+    )
+    fig = px.pie(
+        counts,
+        names="status",
+        values="count",
+        hole=0.58,
+        color="status",
+        color_discrete_map=build_color_map(counts["status"].tolist()),
+        template=APP_TEMPLATE,
+        title="Infrastructure Active Status",
+    )
+    fig.update_traces(
+        textposition="inside",
+        textinfo="percent+label",
+        hovertemplate="<b>%{label}</b><br>Sites: %{value:,}<extra></extra>",
+    )
+    fig.update_layout(height=400)
+    return fig
+
+
+def create_infra_choropleth(df: pd.DataFrame) -> go.Figure:
+    country_counts = (
+        df["country_city"]
+        .dropna()
+        .str.split(",")
+        .str[0]
+        .str.strip()
+        .value_counts()
+        .rename_axis("country")
+        .reset_index(name="sites")
+    )
+    fig = px.choropleth(
+        country_counts,
+        locations="country",
+        locationmode="country names",
+        color="sites",
+        color_continuous_scale=QUALITY_SCALE,
+        template=APP_TEMPLATE,
+        title="Infrastructure Sites by Country",
+        labels={"sites": "Sites", "country": "Country"},
+    )
+    fig.update_traces(
+        hovertemplate="<b>%{location}</b><br>Sites: %{z:,}<extra></extra>",
+    )
+    fig.update_layout(
+        height=500,
+        coloraxis_colorbar=dict(title="Sites"),
+        geo=dict(showframe=False, showcoastlines=True, projection_type="natural earth"),
+        margin=dict(l=0, r=0, t=40, b=0),
+    )
+    return fig
+
+
+# ── Locations ──────────────────────────────────────────────────────────────────
+
+def create_locations_by_type(df: pd.DataFrame) -> go.Figure:
+    counts = (
+        df["type"]
+        .value_counts()
+        .rename_axis("type")
+        .reset_index(name="count")
+    )
+    fig = px.pie(
+        counts,
+        names="type",
+        values="count",
+        hole=0.58,
+        template=APP_TEMPLATE,
+        title="Locations by Type",
+        color_discrete_sequence=[PRIMARY_ACCENT, SECONDARY_ACCENT, HIGHLIGHT],
+    )
+    fig.update_traces(
+        textposition="inside",
+        textinfo="percent+label",
+        hovertemplate="<b>%{label}</b><br>Count: %{value:,}<extra></extra>",
+    )
+    fig.update_layout(height=400)
+    return fig
+
+
+def create_locations_by_country_type(df: pd.DataFrame) -> go.Figure:
+    chart_df = (
+        df[df["aepw_country_type"].notna() & (df["aepw_country_type"] != "")]
+        ["aepw_country_type"]
+        .value_counts()
+        .rename_axis("country_type")
+        .reset_index(name="count")
+        .sort_values("count", ascending=True)
+    )
+    if chart_df.empty:
+        return _empty_figure(
+            "Locations by AEPW Country Type",
+            "No AEPW country type data available.",
+        )
+    fig = px.bar(
+        chart_df,
+        x="count",
+        y="country_type",
+        orientation="h",
+        text="count",
+        template=APP_TEMPLATE,
+        title="Locations by AEPW Country Type*",
+        subtitle="* AEPW country type is a classification of countries by the Aid Effectiveness Platform for the World (AEPW) while we are unaware of the specific criteria used for classification.",
+        labels={"count": "Locations", "country_type": "AEPW country type"},
+        color="count",
+        color_continuous_scale=QUALITY_SCALE,
+    )
+    fig.update_traces(
+        textposition="outside",
+        hovertemplate="<b>%{y}</b><br>Locations: %{x:,}<extra></extra>",
+    )
+    fig.update_layout(height=380, coloraxis_showscale=False)
+    return fig
+
+
+# ── Projects ───────────────────────────────────────────────────────────────────
+
+def create_projects_by_status(df: pd.DataFrame) -> go.Figure:
+    chart_df = (
+        df["project_status"]
+        .value_counts()
+        .rename_axis("status")
+        .reset_index(name="count")
+        .sort_values("count", ascending=True)
+    )
+    fig = px.bar(
+        chart_df,
+        x="count",
+        y="status",
+        orientation="h",
+        text="count",
+        template=APP_TEMPLATE,
+        title="Projects by Status",
+        labels={"count": "Projects", "status": "Status"},
+        color="status",
+        color_discrete_map=build_color_map(chart_df["status"].tolist()),
+    )
+    fig.update_traces(
+        textposition="outside",
+        hovertemplate="<b>%{y}</b><br>Projects: %{x:,}<extra></extra>",
+    )
+    fig.update_layout(height=360, showlegend=False)
+    return fig
+
+
+def create_projects_by_countries(df: pd.DataFrame) -> go.Figure:
+    count = 10
+    chart_df = (
+        df["countries"]
+        .dropna()
+        .value_counts()
+        .head(count)
+        .rename_axis("country")
+        .reset_index(name="count")
+        .sort_values("count", ascending=True)
+    )
+    fig = px.bar(
+        chart_df,
+        x="count",
+        y="country",
+        orientation="h",
+        text="count",
+        template=APP_TEMPLATE,
+        title="Top " + str(count) + " Countries by Project Count",
+        labels={"count": "Projects", "country": "Country"},
+        color="count",
+        color_continuous_scale=QUALITY_SCALE,
+    )
+    fig.update_traces(
+        textposition="outside",
+        hovertemplate="<b>%{y}</b><br>Projects: %{x:,}<extra></extra>",
+    )
+    fig.update_layout(height=max(360, len(chart_df) * 28), coloraxis_showscale=False)
     return fig

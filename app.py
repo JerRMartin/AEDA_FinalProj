@@ -4,24 +4,42 @@ import pandas as pd
 import streamlit as st
 
 from src.charts import (
-    create_bar_chart,
-    create_box_plot,
     create_correlation_heatmap,
-    create_distribution_chart,
-    create_donut_chart,
+    create_data_points_by_group,
+    create_documents_by_country,
+    create_documents_by_filetype,
+    create_documents_by_year,
+    create_extraction_quality_histogram,
+    create_extraction_validation_donut,
+    create_extractions_by_year,
+    create_infra_by_status,
+    create_infra_by_type,
+    create_infra_choropleth,
+    create_message_sender_donut,
+    create_message_wordcloud,
+    create_locations_by_country_type,
+    create_locations_by_type,
+    create_messages_timeline,
+    create_projects_by_countries,
+    create_projects_by_status,
     create_scatter_chart,
     create_trend_chart,
 )
-from src.data_loader import get_analysis_dataset, get_data_dictionary, get_key_terms
+from src.data_loader import (
+    RAW_TABLE_TABS,
+    get_analysis_dataset,
+    get_key_terms,
+    load_raw_table,
+)
 from src.metrics import build_insight_text, compute_kpis
 from src.utils import (
     APP_SUBTITLE,
     APP_TITLE,
     DATASET_NAME,
-    DATASET_SOURCE_TEXT,
     DEFAULT_TOP_N,
     inject_custom_css,
     make_download_frame,
+    render_caption,
     render_empty_state,
     render_filter_summary,
     render_kpi_card,
@@ -78,18 +96,24 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
     return filtered
 
 
-def render_header() -> None:
-    st.title(APP_TITLE)
-    st.caption(f"{DATASET_NAME} | {APP_SUBTITLE}")
+def apply_sidebar_filters(df: pd.DataFrame) -> pd.DataFrame:
+    filtered = df.copy()
+    year_start, year_end = st.session_state.year_range
 
+    if "year" in filtered.columns:
+        filtered = filtered[
+            pd.to_numeric(filtered["year"], errors="coerce").between(year_start, year_end)
+        ]
+    elif "reported_year" in filtered.columns:
+        filtered = filtered[
+            pd.to_numeric(filtered["reported_year"], errors="coerce").between(year_start, year_end)
+        ]
 
-    st.markdown("### Data Dictionary")
-    with st.expander("Data dictionary for dashboard fields"):
-        st.dataframe(get_data_dictionary(), use_container_width=True, hide_index=True)
+    if "validation_status" in filtered.columns:
+        filtered = filtered[filtered["validation_status"].isin(st.session_state.selected_statuses)]
 
-    st.markdown("### Key Terms")
-    with st.expander("Key terms and abbreviations used in the dashboard"):
-        st.dataframe(get_key_terms(), use_container_width=True, hide_index=True)
+    return filtered
+
 
 def render_sidebar(df: pd.DataFrame) -> None:
     st.sidebar.header("Filter Panel")
@@ -113,24 +137,15 @@ def render_sidebar(df: pd.DataFrame) -> None:
         key="selected_statuses",
     )
     st.sidebar.checkbox("Numeric observations only", key="numeric_only")
-    st.sidebar.slider("Top-N categories for ranking charts", 5, 20, key="top_n")
     st.sidebar.slider(
         "Observation year range",
         min_value=int(df["year"].min()),
         max_value=int(df["year"].max()),
         key="year_range",
     )
-
-
-def main() -> None:
-    inject_custom_css(Path("assets/theme.css"))
-    dataset = get_analysis_dataset(Path("."))
-    initialize_state(dataset)
-    render_header()
-    render_sidebar(dataset)
-
-    filtered = filter_dataframe(dataset)
-    render_filter_summary(filtered, dataset)
+def render_kpis(df: pd.DataFrame) -> None:
+    filtered = filter_dataframe(df)
+    render_filter_summary(filtered, df)
 
     if filtered.empty:
         render_empty_state()
@@ -142,85 +157,132 @@ def main() -> None:
         with col:
             render_kpi_card(metric["label"], metric["value"], metric["delta"])
 
+
+def render_analytics(dataset: pd.DataFrame) -> None:
     st.markdown("### Analytical Overview")
-    st.write(
-        "The opening view summarizes evidence volume, topical composition, validation status, and quality dispersion before moving into relationships and trends."
+    filtered = filter_dataframe(dataset)
+
+    if filtered.empty:
+        render_empty_state()
+        return
+
+    scatter_col, heatmap_col = st.columns(2)
+    with scatter_col:
+        st.plotly_chart(
+            create_scatter_chart(filtered),
+            use_container_width=True,
+        )
+
+    with heatmap_col:
+        st.plotly_chart(
+            create_correlation_heatmap(filtered),
+            use_container_width=True,
+        )
+
+    st.plotly_chart(
+        create_trend_chart(filtered),
+        use_container_width=True,
     )
 
-    overview_left, overview_right = st.columns((1.3, 1))
-    with overview_left:
-        st.plotly_chart(
-            create_bar_chart(filtered, top_n=st.session_state.top_n),
-            use_container_width=True,
-        )
-        st.caption(
-            "Amount chart: ranks the most prevalent indicators in the active filtered view to reveal which measures dominate the evidence base."
-        )
-    with overview_right:
-        st.plotly_chart(
-            create_donut_chart(filtered),
-            use_container_width=True,
-        )
-        st.caption(
-            "Proportion chart: shows the validation mix so the viewer can quickly assess evidence verification in the current slice."
-        )
+    with st.expander("Key Terms and Acronyms"):
+        st.dataframe(get_key_terms(), use_container_width=True, hide_index=True)
 
-    tab_overview, tab_relationships, tab_trends = st.tabs(
-        ["Overview", "Relationships", "Trends & Export"]
+def _render_chat_messages(df: pd.DataFrame) -> None:
+    col1, col2 = st.columns(2)
+    with col1:
+        st.plotly_chart(create_message_wordcloud(df), use_container_width=True)
+    with col2:
+        st.plotly_chart(create_message_sender_donut(df), use_container_width=True)
+    st.plotly_chart(create_messages_timeline(df), use_container_width=True)
+
+
+
+def _render_data_extractions(df: pd.DataFrame) -> None:
+    col1, col2 = st.columns(2)
+    with col1:
+        st.plotly_chart(create_extractions_by_year(df), use_container_width=True)
+    with col2:
+        st.plotly_chart(create_extraction_validation_donut(df), use_container_width=True)
+    st.plotly_chart(create_extraction_quality_histogram(df), use_container_width=True)
+
+
+def _render_data_points(df: pd.DataFrame) -> None:
+    st.plotly_chart(create_data_points_by_group(df), use_container_width=True)
+
+
+def _render_documents(df: pd.DataFrame) -> None:
+    col1, col2 = st.columns(2)
+    with col1:
+        st.plotly_chart(create_documents_by_filetype(df), use_container_width=True)
+    with col2:
+        st.plotly_chart(create_documents_by_year(df), use_container_width=True)
+    st.plotly_chart(
+        create_documents_by_country(df, top_n=st.session_state.top_n),
+        use_container_width=True,
     )
 
-    with tab_overview:
-        dist_col, box_col = st.columns(2)
-        with dist_col:
-            st.plotly_chart(
-                create_distribution_chart(filtered),
-                use_container_width=True,
-            )
-            st.caption(
-                "Distribution chart: examines how overall quality scores are spread, including concentration and tail behavior."
-            )
-        with box_col:
-            st.plotly_chart(
-                create_box_plot(filtered),
-                use_container_width=True,
-            )
-            st.caption(
-                "Distribution by group: compares quality score dispersion across PRISM data groups to highlight variation and outliers."
-            )
 
-    with tab_relationships:
-        scatter_col, heatmap_col = st.columns(2)
-        with scatter_col:
-            st.plotly_chart(
-                create_scatter_chart(filtered),
-                use_container_width=True,
-            )
-            st.caption(
-                "Association chart: compares source credibility and overall quality, making it easier to see whether stronger sources align with stronger records."
-            )
-        with heatmap_col:
-            st.plotly_chart(
-                create_correlation_heatmap(filtered),
-                use_container_width=True,
-            )
-            st.caption(
-                "Association matrix: summarizes score correlations among the extraction quality dimensions used in the PRISM pipeline."
-            )
+def _render_infrastructures(df: pd.DataFrame) -> None:
+    col1, col2 = st.columns(2)
+    with col1:
+        st.plotly_chart(create_infra_by_type(df), use_container_width=True)
+    with col2:
+        st.plotly_chart(create_infra_by_status(df), use_container_width=True)
+    st.plotly_chart(create_infra_choropleth(df), use_container_width=True)
 
-    with tab_trends:
-        st.plotly_chart(
-            create_trend_chart(filtered),
-            use_container_width=True,
-        )
-        st.caption(
-            "Evolution chart: tracks annual extraction volume and mean quality, supporting temporal comparisons within the selected analytical slice."
-        )
 
-        st.markdown("### Key Insights")
-        st.info(build_insight_text(filtered))
+def _render_locations(df: pd.DataFrame) -> None:
+    col1, col2 = st.columns(2)
+    with col1:
+        st.plotly_chart(create_locations_by_type(df), use_container_width=True)
+    with col2:
+        st.plotly_chart(create_locations_by_country_type(df), use_container_width=True)
 
+
+def _render_projects(df: pd.DataFrame) -> None:
+    col1, col2 = st.columns(2)
+    with col1:
+        st.plotly_chart(create_projects_by_status(df), use_container_width=True)
+    with col2:
+        st.plotly_chart(create_projects_by_countries(df), use_container_width=True)
+
+
+_CSV_CHART_RENDERERS = {
+    "chat_messages": _render_chat_messages,
+    "data_extractions": _render_data_extractions,
+    "data_points": _render_data_points,
+    "documents": _render_documents,
+    "infrastructures": _render_infrastructures,
+    "locations": _render_locations,
+    "projects": _render_projects,
+}
+
+
+def render_csv_tab(tab_label: str, file_name: str, df: pd.DataFrame) -> None:
+
+    filtered = apply_sidebar_filters(df)
+    if file_name in _CSV_CHART_RENDERERS:
+        _CSV_CHART_RENDERERS[file_name](filtered)
+
+    total, visible = len(df), len(filtered)
+    suffix = f" · {visible:,} of {total:,} rows after filters" if visible != total else f" · {total:,} rows"
+    render_caption(f"{len(df.columns)} columns{suffix}")
+    st.dataframe(filtered, use_container_width=True, hide_index=True)
+
+    terms = get_key_terms(tab_label)
+    if not terms.empty:
+        with st.expander("Key Terms and Acronyms"):
+            st.dataframe(terms, use_container_width=True, hide_index=True)
+
+
+def render_insights_and_download(df: pd.DataFrame) -> None:
+    filtered = filter_dataframe(df)
+    col1, col2 = st.columns([0.7, 0.3])
+    with col1:
+            st.markdown("### Key Insights")
+            st.info(build_insight_text(filtered))
+    with col2:
         st.markdown("### Download Filtered Dataset")
-
         download_df = make_download_frame(filtered)
         st.download_button(
             "Download filtered dataset as CSV",
@@ -229,6 +291,35 @@ def main() -> None:
             mime="text/csv",
             use_container_width=False,
         )
+
+
+def main() -> None:
+    inject_custom_css(Path("assets/theme.css"))
+    dataset = get_analysis_dataset(Path("."))
+    initialize_state(dataset)
+    render_sidebar(dataset)
+
+    st.title(APP_TITLE)
+    st.caption(f"{DATASET_NAME} | {APP_SUBTITLE}")
+    render_kpis(dataset)
+    st.space("medium")
+
+    tab_names = ["Analytics"] + [label for label, *_ in RAW_TABLE_TABS] + ["Insights & Download"]
+    tabs = st.tabs(tab_names)
+
+    with tabs[0]:
+        render_analytics(dataset)
+
+    for tab, (tab_label, file_name, exclude_cols) in zip(tabs[1:-1], RAW_TABLE_TABS):
+        with tab:
+            df = load_raw_table(Path("."), file_name)
+            if exclude_cols:
+                df = df.drop(columns=[c for c in exclude_cols if c in df.columns])
+            render_csv_tab(tab_label, file_name, df)
+
+    with tabs[-1]:
+        render_insights_and_download(dataset)
+
 
 if __name__ == "__main__":
     main()

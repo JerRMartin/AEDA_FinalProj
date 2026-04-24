@@ -72,3 +72,16 @@ button[data-baseweb="tab"] p {
 div[data-testid="stTabs"] [data-baseweb="tab-highlight"] {
   background-color: var(--warm-accent);
 }
+
+abbr {
+  text-decoration: underline dotted var(--secondary-accent);
+  text-underline-offset: 3px;
+  cursor: help;
+}
+
+.app-caption {
+  font-size: 0.875rem;
+  color: #324a5f;
+  opacity: 0.8;
+  margin-top: -0.4rem;
+}

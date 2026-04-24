@@ -1,43 +1,70 @@
 import pandas as pd
 
-from src.utils import format_compact_number, format_decimal, format_percent
+from src.utils import format_compact_number, format_percent
+
+
+def _numeric_for(df: pd.DataFrame, point_name: str) -> pd.Series:
+    return df.loc[
+        (df["data_point_name"] == point_name) & df["numeric_value"].notna(),
+        "numeric_value",
+    ]
 
 
 def compute_kpis(df: pd.DataFrame) -> list[dict[str, str]]:
-    total_observations = len(df)
-    distinct_documents = df["document_id"].nunique()
-    median_quality = df["overall_quality_score"].median()
-    validated_share = (df["validation_status"] == "VALIDATED").mean()
-    numeric_mean = df["numeric_value"].mean()
-    top_country = (
-        df["country_name"].value_counts().idxmax() if not df["country_name"].empty else "N/A"
+    country_df = df[df["location_type"] == "Country"]
+
+    # KPI 1 — Total Plastic Waste Generated (metric tons, country-level)
+    pw_gen = _numeric_for(country_df, "Plastic Waste Generated")
+    total_generated = pw_gen.sum() if not pw_gen.empty else float("nan")
+    gen_countries = (
+        country_df.loc[country_df["data_point_name"] == "Plastic Waste Generated", "country_name"]
+        .nunique()
     )
+
+    # KPI 2 — Total Plastic Waste Collected (metric tons, country-level)
+    pw_col = _numeric_for(country_df, "Plastic Waste Collected")
+    total_collected = pw_col.sum() if not pw_col.empty else float("nan")
+
+    # KPI 3 — Leakage Rate = (Generated − Collected) / Generated
+    if total_generated and total_generated > 0:
+        leakage_rate = (total_generated - total_collected) / total_generated
+    else:
+        leakage_rate = float("nan")
+
+    # KPI 4 — Recycling Rate: mean of "Plastic Waste % Collected For Recycling"
+    recycling_pct = _numeric_for(df, "Plastic Waste % Collected For Recycling")
+    mean_recycling = recycling_pct.mean() / 100 if not recycling_pct.empty else float("nan")
+
+    # KPI 5 — SUP Share = SUP Consumed / Total Plastic Consumption
+    sup_total = _numeric_for(df, "SUP Consumed").sum()
+    plastic_total = _numeric_for(df, "Total Plastic Consumption").sum()
+    sup_share = sup_total / plastic_total if plastic_total > 0 else float("nan")
 
     return [
         {
-            "label": "Observations",
-            "value": format_compact_number(total_observations),
-            "delta": f"{format_compact_number(distinct_documents)} documents",
+            "label": "PW Generated",
+            "value": format_compact_number(total_generated),
+            "delta": f"metric tons · {gen_countries} countries",
         },
         {
-            "label": "Median Quality",
-            "value": format_decimal(median_quality, suffix="/100"),
-            "delta": "Composite PRISM score",
+            "label": "PW Collected",
+            "value": format_compact_number(total_collected),
+            "delta": "metric tons · country-level",
         },
         {
-            "label": "Validated Share",
-            "value": format_percent(validated_share),
-            "delta": "Share of filtered records",
+            "label": "Leakage Rate",
+            "value": format_percent(leakage_rate),
+            "delta": "(Generated − Collected) / Generated",
         },
         {
-            "label": "Mean Numeric Value",
-            "value": format_compact_number(numeric_mean),
-            "delta": "Parsed from extraction value",
+            "label": "Recycling Rate",
+            "value": format_percent(mean_recycling),
+            "delta": "Mean % collected for recycling",
         },
         {
-            "label": "Top Country",
-            "value": top_country,
-            "delta": "Largest filtered evidence volume",
+            "label": "SUP Share",
+            "value": format_percent(sup_share),
+            "delta": "SUP / Total Plastic Consumption",
         },
     ]
 

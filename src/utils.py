@@ -1,3 +1,4 @@
+import re
 from pathlib import Path
 from typing import Optional, Union
 
@@ -95,6 +96,61 @@ def format_percent(value: Optional[float]) -> str:
     return f"{value:.1%}"
 
 
+ACRONYM_GLOSSARY: dict[str, str] = {
+    "ABS":   "Acrylonitrile Butadiene Styrene",
+    "AEPW":  "Alliance to End Plastic Waste",
+    "AI":    "Artificial Intelligence",
+    "BAU":   "Business As Usual",
+    "CPCB":  "Central Pollution Control Board",
+    "CSIRO": "Commonwealth Scientific and Industrial Research Organisation",
+    "EDA":   "Exploratory Data Analysis",
+    "EPA":   "Environmental Protection Agency",
+    "GDP":   "Gross Domestic Product",
+    "GIZ":   "Deutsche Gesellschaft für Internationale Zusammenarbeit",
+    "HDPE":  "High-Density Polyethylene",
+    "ISWM":  "Integrated Solid Waste Management",
+    "IUCN":  "International Union for Conservation of Nature",
+    "IWC":   "Informal Waste Collector",
+    "JWT":   "JSON Web Token",
+    "LDPE":  "Low-Density Polyethylene",
+    "MLP":   "Multi-Layered Plastic",
+    "MSW":   "Municipal Solid Waste",
+    "MVP":   "Minimum Viable Product",
+    "NGO":   "Non-Governmental Organization",
+    "OECD":  "Organisation for Economic Co-operation and Development",
+    "PC":    "Polycarbonate",
+    "PCR":   "Post-Consumer Recycled",
+    "PCX":   "Plastic Credit Exchange",
+    "PET":   "Polyethylene Terephthalate",
+    "PP":    "Polypropylene",
+    "PRISM": "Plastics Recovery Insights Steering Model",
+    "PS":    "Polystyrene",
+    "PVC":   "Polyvinyl Chloride",
+    "PW":    "Plastic Waste",
+    "SUP":   "Single-Use Plastic",
+    "TCI":   "The Circulate Initiative",
+    "UNCRD": "United Nations Centre for Regional Development",
+    "UNEP":  "United Nations Environment Programme",
+    "WaCT":  "Waste Wise City Tool",
+}
+
+# Sort longest first so "PRISM" is tried before "PS", "PCR" before "PC", etc.
+_ACRONYM_RE = re.compile(
+    r"\b(" + "|".join(re.escape(k) for k in sorted(ACRONYM_GLOSSARY, key=len, reverse=True)) + r")\b"
+)
+
+
+def acronymize(text: str) -> str:
+    return _ACRONYM_RE.sub(
+        lambda m: f'<abbr title="{ACRONYM_GLOSSARY[m.group()]}">{m.group()}</abbr>',
+        text,
+    )
+
+
+def render_caption(text: str) -> None:
+    st.markdown(f'<p class="app-caption">{acronymize(text)}</p>', unsafe_allow_html=True)
+
+
 def inject_custom_css(css_path: Path) -> None:
     if css_path.exists():
         root_block = ":root {\n" + "".join(f"  {k}: {v};\n" for k, v in _CSS_VARS.items()) + "}\n"
@@ -105,9 +161,9 @@ def render_kpi_card(label: str, value: str, delta: str) -> None:
     st.markdown(
         f"""
         <div class="kpi-card">
-            <div class="kpi-label">{label}</div>
+            <div class="kpi-label">{acronymize(label)}</div>
             <div class="kpi-value">{value}</div>
-            <div class="kpi-delta">{delta}</div>
+            <div class="kpi-delta">{acronymize(delta)}</div>
         </div>
         """,
         unsafe_allow_html=True,
